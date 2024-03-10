@@ -30,14 +30,36 @@ Modifications
 - A single file is exported, rather than two individual files
 """
 
+from typing import NamedTuple
+
 import polars as pl
 
 
 # Parameters
 # ==========
 
-PASSENGER_FLIGHT_DETAILS_CSV = "data/input/PD 2024 Wk 1 Input.csv"
-PASSENGER_FLIGHT_DETAIL_NDJSON = "data/output/passenger_flight_details.ndjson"
+RAW_PASSENGER_FLIGHT_DETAILS_CSV = "data/input/PD 2024 Wk 1 Input.csv"
+PASSENGER_FLIGHT_DETAILS_NDJSON = "data/output/passenger_flight_details.ndjson"
+
+
+# Classes
+# =======
+
+
+class PassengerFlightDetails(NamedTuple):
+    flight_details: str = "flight_details"
+    date: str = "date"
+    flight_number: str = "flight_number"
+    from_: str = "from"
+    to: str = "to"
+    class_: str = "class"
+    price: str = "price"
+    has_flow_card: str = "has_flow_card"
+    number_of_bags_checked: str = "number_of_bags_checked"
+    meal_type: str = "meal_type"
+
+
+PFD = PassengerFlightDetails()
 
 
 # Functions
@@ -45,61 +67,76 @@ PASSENGER_FLIGHT_DETAIL_NDJSON = "data/output/passenger_flight_details.ndjson"
 
 
 def run_pipeline() -> None:
-    """Run the pipeline."""
+    """Run the pipeline.
 
-    raw_data = pl.scan_csv(PASSENGER_FLIGHT_DETAILS_CSV)
-
-    preproc_data = raw_data.pipe(preprocess_data)
-    transformed_data = preproc_data.pipe(transform_data)
-
-    transformed_data.collect().write_ndjson(PASSENGER_FLIGHT_DETAIL_NDJSON)
-
-
-def preprocess_data(raw_data: pl.LazyFrame) -> pl.LazyFrame:
-    """Preprocess the data.
-
-    Parameters
-    ----------
-    raw_data : pl.LazyFrame
-        The raw data.
-
-    Returns
-    -------
-    pl.LazyFrame
-        Preprocessed data.
-
-    Notes
-    -----
-    We introduce a primary key into the data, and clean up the field names.
+    Reads the raw data, preprocesses and transforms it, and then writes
+    the result to a .ndjson file.
     """
-    return raw_data.with_row_index("id", offset=1).rename(
-        {
-            "Flight Details": "flight_details",
-            "Flow Card?": "has_flow_card",
-            "Bags Checked": "number_of_bages_checked",
-            "Meal Type": "meal_type",
-        }
+
+    try:
+        # Load the raw data
+        raw_data = pl.scan_csv(RAW_PASSENGER_FLIGHT_DETAILS_CSV)
+
+        # Preprocess the raw data
+        preprocessed_data = raw_data.pipe(preprocess_raw_data)
+
+        # Transform the raw data
+        transformed_data = preprocessed_data.pipe(transform_preprocessed_data)
+
+        # Output transfromed
+        transformed_data.write_ndjson(PASSENGER_FLIGHT_DETAILS_NDJSON)
+
+        print("Pipeline executed successfully.")
+    except Exception as e:
+        print(f"Error during pipeline execution: {str(e)}")
+
+
+def preprocess_raw_data(data: pl.LazyFrame) -> pl.LazyFrame:
+    renamer = {
+        "Flight Details": PFD.flight_details,
+        "Flow Card?": PFD.has_flow_card,
+        "Bags Checked": PFD.number_of_bags_checked,
+        "Meal Type": PFD.meal_type,
+    }
+
+    return (
+        data.with_row_index("id")
+        .rename(renamer)
+        .with_columns(pl.col(PFD.has_flow_card).cast(pl.Boolean))
     )
 
 
-def transform_data(preproc_data: pl.LazyFrame) -> pl.LazyFrame:
-    """Transform the preprocessed data.
+def transform_preprocessed_data(preprocessed_data: pl.LazyFrame) -> pl.DataFrame:
+    return (
+        preprocessed_data.pipe(extract_flight_details)
+        .pipe(rename_flight_details_struct)
+        .pipe(unnest_flight_details_struct)
+        .collect()
+    )
 
-    Parameters
-    ----------
-    preproc_data : pl.LazyFrame
-        Preprocessed data as returned from preprocess_data.
 
-    Returns
-    -------
-    pl.LazyFrame
-        Transformed data.
-    """
-    return preproc_data.with_columns(
-        pl.col("flight_details")
-        .str.extract_groups(r"(.+)//(.+)//(.+)-(.+)//(.+)//(.+)")
-        .struct.rename_fields(
-            ["date", "flight_number", "from", "to", "class", "price"]
-        ),
-        pl.col("has_flow_card").cast(pl.Boolean),
-    ).unnest("flight_details")
+def extract_flight_details(data: pl.LazyFrame) -> pl.LazyFrame:
+    flight_details_patt = r"(.+)//(.+)//(.+)-(.+)//(.+)//(.+)"
+
+    return data.with_columns(
+        pl.col(PFD.flight_details).str.extract_groups(flight_details_patt)
+    )
+
+
+def rename_flight_details_struct(data: pl.LazyFrame) -> pl.LazyFrame:
+    flight_detail_struct_renamer = [
+        PFD.date,
+        PFD.flight_number,
+        PFD.from_,
+        PFD.to,
+        PFD.class_,
+        PFD.price,
+    ]
+
+    return data.with_columns(
+        pl.col(PFD.flight_details).struct.rename_fields(flight_detail_struct_renamer)
+    )
+
+
+def unnest_flight_details_struct(data: pl.LazyFrame) -> pl.LazyFrame:
+    return data.unnest(PFD.flight_details)
