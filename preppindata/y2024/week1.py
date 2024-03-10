@@ -24,52 +24,82 @@ Task outline
 Modifications
 =============
 
-There
+- All field names are set to snake_case
+- A primary key is introduced to the data
+- The "Flow Card?" field is set to a Boolean value, rather than Yes / No
+- A single file is exported, rather than two individual files
 """
 
 import polars as pl
 
 
-def run_pipeline(flight_details_csv_path: str) -> None:
-    """Run the pipeline.
+# Parameters
+# ==========
 
-    _extended_summary_
+PASSENGER_FLIGHT_DETAILS_CSV = "data/input/PD 2024 Wk 1 Input.csv"
+PASSENGER_FLIGHT_DETAIL_NDJSON = "data/output/passenger_flight_details.ndjson"
 
-    Parameters
-    ----------
-    flight_details_csv_path : str
-        Path to the raw data.
-    """
 
-    raw_data = extract_data(flight_details_csv_path)
+# Functions
+# =========
+
+
+def run_pipeline() -> None:
+    """Run the pipeline."""
+
+    raw_data = pl.scan_csv(PASSENGER_FLIGHT_DETAILS_CSV)
+
     preproc_data = raw_data.pipe(preprocess_data)
     transformed_data = preproc_data.pipe(transform_data)
-    transformed_data.pipe(load_data)
 
-
-def extract_data(csv_path: str, schema: dict[str, str]) -> pl.LazyFrame:
-    """Extract the data into a polars LazyFrame."""
-    return pl.scan_csv(fp)
+    transformed_data.collect().write_ndjson(PASSENGER_FLIGHT_DETAIL_NDJSON)
 
 
 def preprocess_data(raw_data: pl.LazyFrame) -> pl.LazyFrame:
-    """Return the preprocessed data."""
+    """Preprocess the data.
+
+    Parameters
+    ----------
+    raw_data : pl.LazyFrame
+        The raw data.
+
+    Returns
+    -------
+    pl.LazyFrame
+        Preprocessed data.
+
+    Notes
+    -----
+    We introduce a primary key into the data, and clean up the field names.
+    """
+    return raw_data.with_row_index("id", offset=1).rename(
+        {
+            "Flight Details": "flight_details",
+            "Flow Card?": "has_flow_card",
+            "Bags Checked": "number_of_bages_checked",
+            "Meal Type": "meal_type",
+        }
+    )
 
 
 def transform_data(preproc_data: pl.LazyFrame) -> pl.LazyFrame:
-    """_summary_
+    """Transform the preprocessed data.
 
-    Args:
-        data (pl.LazyFrame): _description_
+    Parameters
+    ----------
+    preproc_data : pl.LazyFrame
+        Preprocessed data as returned from preprocess_data.
 
-    Returns:
-        pl.LazyFrame: _description_
+    Returns
+    -------
+    pl.LazyFrame
+        Transformed data.
     """
-
-
-def load_data(transformed_data: pl.LazyFrame) -> None:
-    """_summary_
-
-    Args:
-        transformed_data (pl.LazyFrame): _description_
-    """
+    return preproc_data.with_columns(
+        pl.col("flight_details")
+        .str.extract_groups(r"(.+)//(.+)//(.+)-(.+)//(.+)//(.+)")
+        .struct.rename_fields(
+            ["date", "flight_number", "from", "to", "class", "price"]
+        ),
+        pl.col("has_flow_card").cast(pl.Boolean),
+    ).unnest("flight_details")
