@@ -1,17 +1,4 @@
-"""Preppin' Data Challenge 2024 - Week 1
-
-Task:
-Clean and preprocess data related to Prep Air, focusing on the new loyalty
-card called the Flow Card.
-
-Solution Pipeline:
-1. Load data from the input CSV file.
-2. Preprocess the data by renaming columns, converting the "Flow Card?"
-   column to boolean, and adding a primary key.
-3. Clean the data by splitting the "Flight Details" field, converting date
-   and price to the correct data types.
-4. (Optional) Fix the "class" field by replacing specific values.
-5. Export the cleaned data in NDJSON format.
+"""Preppin' Data Challenge 2024: Week 1 - Prep Air's Flow Card
 """
 
 import polars as pl
@@ -19,16 +6,17 @@ import polars as pl
 
 # Parameters
 # ----------
+
 # IO path strings
 # ===============
+
 INPUT_CSV = "data/input/PD 2024 Wk 1 Input.csv"
 OUTPUT_NDJSON = "data/output/flight_details.ndjson"
 FIXED_OUT_NDJSON = "data/output/fixed_flight_details.ndjson"
 
 # Preprocessing parameters
 # ========================
-INPUT_RENAMER_DICT = {
-    "Flight Details": "flight_details",
+RENAMER_DICT = {
     "Flow Card?": "has_flow_card",
     "Bags Checked": "number_of_bags_checked",
     "Meal Type": "meal_type",
@@ -36,6 +24,7 @@ INPUT_RENAMER_DICT = {
 
 # Cleansing parameters
 # ====================
+
 FLIGHT_DETAILS_PATTERN = r"(.+)//(.+)//(.+)-(.+)//(.+)//(.+)"
 FLIGHT_DETAILS_STRUCT_FIELD_NAMES = [
     "date",
@@ -48,6 +37,7 @@ FLIGHT_DETAILS_STRUCT_FIELD_NAMES = [
 
 # Fix class praramters
 # ====================
+
 CLASS_REPLACER_DICT = {
     "Economy": "First Class",
     "First Class": "Economy",
@@ -56,10 +46,14 @@ CLASS_REPLACER_DICT = {
 }
 
 
+# Functions
+# ---------
+
+
 def main() -> None:
     """Main function to orchestrate the data preparation process."""
     # Clean the input data
-    cleansed_data = load_data(INPUT_CSV).pipe(preprocess_data).pipe(clean_data)
+    cleansed_data = load_data(INPUT_CSV).pipe(clean_data)
 
     # Export the clean data
     cleansed_data.collect().write_ndjson(OUTPUT_NDJSON)
@@ -69,98 +63,63 @@ def main() -> None:
 
 
 def load_data(fsrc: str) -> pl.LazyFrame:
-    """Load data from a CSV file into a polars LazyFrame.
-
-
-    Parameters
-    ----------
-    fsrc : str
-        File path of the CSV file.
-
-    Returns
-    -------
-    LazyFrame
-        Polars LazyFrame containing the loaded data.
-    """
+    """Load data from a CSV file into a polars LazyFrame."""
     return pl.scan_csv(fsrc)
 
 
-def preprocess_data(input_data: pl.LazyFrame) -> pl.LazyFrame:
-    """Preprocess the data by renaming columns and casting the "Flow Card?"
-    column to boolean and add a primary key field.
+def clean_data(input_data: pl.LazyFrame) -> pl.LazyFrame:
+    """Cleanse the data.
 
-    Parameters
-    ----------
-    input_data : LazyFrame
-        Input data in the form of a polars LazyFrame.
-
-    Returns
-    -------
-    LazyFrame
-        Polars LazyFrame with preprocessed data.
+    Notes
+    -----
+    Cleaning steps:
+    1. Add a primary key
+    2. Split the "Flight Details" column
+    3. Cast the data, price, and flow card coluns to the correct data types
     """
     # Expressions
-    cast_has_flow_card_expr = pl.col("has_flow_card").cast(pl.Boolean)
-
-    return (
-        input_data.with_row_index("id")
-        .rename(INPUT_RENAMER_DICT)
-        .with_columns(cast_has_flow_card_expr)
+    extract_groups_expr = (
+        pl.col("Flight Details")
+        .str.extract_groups(FLIGHT_DETAILS_PATTERN)
+        .alias("flight_details_struct")
     )
-
-
-def clean_data(pre_data: pl.LazyFrame) -> pl.LazyFrame:
-    """
-    Cleanse the data by splitting the "Flight Details" field and converting
-    date and price to the correct data types.
-
-    Parameters
-    ----------
-    pre_data : LazyFrame
-        Preprocessed data in the form of a polars LazyFrame.
-
-    Returns
-    -------
-    LazyFrame
-        Polars LazyFrame with cleaned data.
-    """
-    # Expressions
-    extract_groups_expr = pl.col("flight_details").str.extract_groups(
-        FLIGHT_DETAILS_PATTERN
-    )
-    rename_struct_fields_expr = pl.col("flight_details").struct.rename_fields(
+    rename_struct_fields_expr = pl.col("flight_details_struct").struct.rename_fields(
         FLIGHT_DETAILS_STRUCT_FIELD_NAMES
     )
     cast_data_types_exprs = [
+        pl.col("Flow Card?").cast(pl.Boolean),
         pl.col("date").str.to_date(),
         pl.col("price").cast(pl.Float64),
     ]
 
     return (
-        pre_data.with_columns(extract_groups_expr)
+        input_data
+        # Add a primary key
+        .with_row_index("id")
+        # Split the flight detail columns
+        .with_columns(extract_groups_expr)
         .with_columns(rename_struct_fields_expr)
-        .unnest("flight_details")
+        .unnest("flight_details_struct")
+        # Clean the data types
         .with_columns(cast_data_types_exprs)
+        # Clean the column name
+        .rename(RENAMER_DICT)
+        .select("id", *FLIGHT_DETAILS_STRUCT_FIELD_NAMES, *RENAMER_DICT.values())
     )
 
 
 def fix_class_field(clean_data: pl.LazyFrame) -> pl.LazyFrame:
-    """
-    Fix the assignments for the "class" field based on a predefined dictionary
-    of replacements.
+    """Fix the assignments for the "class" columns.
 
-    Parameters
-    ----------
-    clean_data : LazyFrame
-        Cleaned data in the form of a polars LazyFrame.
-
-    Returns
-    -------
-    LazyFrame
-        Polars LazyFrame with fixed "class" field.
+    Notes
+    -----
+    We learned that class column contained the incorrect data in the second
+    challenge.
     """
     class_patterns_arr = list(CLASS_REPLACER_DICT.keys())
     class_replace_with_arr = list(CLASS_REPLACER_DICT.values())
+
+    # Expressions
     class_replacer_expr = pl.col("class").str.replace_many(
         class_patterns_arr, class_replace_with_arr
     )
