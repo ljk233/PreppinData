@@ -14,16 +14,14 @@ INPUT_CSV = "data/input/PD 2024 Wk 1 Input.csv"
 OUTPUT_NDJSON = "data/output/flight_details.ndjson"
 FIXED_OUT_NDJSON = "data/output/fixed_flight_details.ndjson"
 
-# Preprocessing parameters
-# ========================
-RENAMER_DICT = {
+# Cleansing parameters
+# ====================
+
+INPUT_RENAMER_DICT = {
     "Flow Card?": "has_flow_card",
     "Bags Checked": "number_of_bags_checked",
     "Meal Type": "meal_type",
 }
-
-# Cleansing parameters
-# ====================
 
 FLIGHT_DETAILS_PATTERN = r"(.+)//(.+)//(.+)-(.+)//(.+)//(.+)"
 FLIGHT_DETAILS_STRUCT_FIELD_NAMES = [
@@ -103,8 +101,8 @@ def clean_data(input_data: pl.LazyFrame) -> pl.LazyFrame:
         # Clean the data types
         .with_columns(cast_data_types_exprs)
         # Clean the column name
-        .rename(RENAMER_DICT)
-        .select("id", *FLIGHT_DETAILS_STRUCT_FIELD_NAMES, *RENAMER_DICT.values())
+        .rename(INPUT_RENAMER_DICT)
+        .select("id", *FLIGHT_DETAILS_STRUCT_FIELD_NAMES, *INPUT_RENAMER_DICT.values())
     )
 
 
