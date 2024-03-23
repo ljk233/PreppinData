@@ -1,14 +1,12 @@
 """Common Polar Expressions
 """
 
-from polars import col, Expr
+import polars as pl
 
 
-def alias(from_col_name: str, to_col_name: str) -> Expr:
-    """Wrapper for pl.col(from_col_name).alias(to_col_name)."""
-    return col(from_col_name).alias(to_col_name)
-
-
-def parse_date_str(col_name: str, format: str) -> Expr:
-    """Wrapper for pl.col(from_col_name).str.to_date(format)."""
-    return col(col_name).str.to_date(format)
+def parse_str_to_bool(col_name: str, true_label: str) -> pl.Expr:
+    return (
+        pl.when(pl.col(col_name) == true_label)
+        .then(pl.lit(True))
+        .otherwise(pl.lit(False))
+    )
