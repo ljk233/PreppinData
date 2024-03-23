@@ -1,4 +1,4 @@
-"""2023.challenge07.py
+"""2023.challenge07
 """
 
 import polars as pl
@@ -9,8 +9,13 @@ def solve(
     account_info_fsrc: str,
     transaction_detail_fsrc: str,
     transaction_path_fsrc: str,
-    output_ndjson_fdst: str,
 ) -> pl.LazyFrame:
+    """Solve challenge 7 of Preppin' Data 2023.
+
+    Notes
+    -----
+    See solution output at output/2023/wk07_flagged_transction.ndjson.
+    """
     # Preprocess the data
     pre_account_holder = preprocess_account_holder(account_holder_fsrc)
     pre_account_info = preprocess_account_info(account_info_fsrc)
@@ -27,8 +32,7 @@ def solve(
         (pl.col("is_cancelled").not_()) & (pl.col("transaction_value") > 1000)
     )
 
-    # Merge the datasets
-    flagged_transactions = (
+    return (
         filtered_transaction_detail.join(pre_transaction_path, on="transaction_id")
         .join(
             filtered_account_info,
@@ -51,11 +55,6 @@ def solve(
             "first_line_of_address",
         )
     )
-
-    # Export the data
-    flagged_transactions.collect().write_ndjson(output_ndjson_fdst)
-
-    return flagged_transactions
 
 
 def preprocess_account_holder(fsrc: str) -> pl.LazyFrame:
