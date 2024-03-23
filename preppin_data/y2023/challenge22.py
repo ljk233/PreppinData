@@ -5,8 +5,6 @@ See solution output at "output/2023/wk22_students_with_cause_for_concern.ndjson"
 
 import polars as pl
 
-from .. import common_expressions as cx
-
 
 def solve(input_file: str) -> pl.DataFrame:
     """Solve challenge 22 of Preppin' Data 2023."""
