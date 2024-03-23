@@ -1,4 +1,6 @@
-"""
+"""2023: Week 10 - What's my Balance on this day?
+
+See solution output at "output/2023/wk10_daily_balance_example.ndjson".
 """
 
 import re
@@ -15,7 +17,7 @@ def solve(
     transaction_path_fsrc: str,
     balance_on: str = "2023-02-01",
 ) -> pl.LazyFrame:
-    """"""
+    """Solve challenge 10 of Preppin' Data 2023."""
     # Parse the date string
     balance_on_date = parse_date_str(balance_on)
 

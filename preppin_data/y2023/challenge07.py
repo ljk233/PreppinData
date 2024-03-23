@@ -1,4 +1,6 @@
-"""2023.challenge07
+"""2023: Week 7 - Flagging Fraudulent Suspicions
+
+See solution output at "output/2023/wk07_flagged_transction.ndjson".
 """
 
 import polars as pl
@@ -10,12 +12,7 @@ def solve(
     transaction_detail_fsrc: str,
     transaction_path_fsrc: str,
 ) -> pl.LazyFrame:
-    """Solve challenge 7 of Preppin' Data 2023.
-
-    Notes
-    -----
-    See solution output at output/2023/wk07_flagged_transction.ndjson.
-    """
+    """Solve challenge 7 of Preppin' Data 2023."""
     # Preprocess the data
     pre_account_holder = preprocess_account_holder(account_holder_fsrc)
     pre_account_info = preprocess_account_info(account_info_fsrc)

@@ -1,4 +1,6 @@
-"""2023.challenge14
+"""2023: Week 14 - World Trade Data
+
+See solution output at output/2023/wk14_world_imports_exports.ndjson.
 """
 
 import polars as pl
@@ -7,12 +9,7 @@ from ..read_polars import read_zip_file
 
 
 def solve(wits_zfsrc: str, country_code_fsrc: str) -> pl.DataFrame:
-    """Solve challenge 14 of Preppin' Data 2023.
-
-    Notes
-    -----
-    See solution output at output/2023/wk14_world_imports_exports.ndjson.
-    """
+    """Solve challenge 14 of Preppin' Data 2023."""
     # Preprocess the data
     pre_wits = collect_preprocessed_wits_data(wits_zfsrc)
     country_geo = preprocess_country_geo(country_code_fsrc)

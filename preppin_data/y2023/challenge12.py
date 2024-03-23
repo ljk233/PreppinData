@@ -1,11 +1,11 @@
-"""2023.challenge12
+"""2023: Week 12 - Regulatory Reporting Alignment
+
+See solution output at "output/2023/wk12_new_customers_ready_to_report.ndjson".
 """
 
 from datetime import date
 
 import polars as pl
-
-from .. import common_expressions as cx
 
 
 def solve(input_data_str: str) -> pl.LazyFrame:
@@ -60,7 +60,7 @@ def solve(input_data_str: str) -> pl.LazyFrame:
         )
         .select(
             "misalignment_flag",
-            cx.alias("reporting_month", "uk_reporting_month"),
+            pl.col("reporting_month").alias("uk_reporting_month"),
             "reporting_day",
             "reported_on",
             "number_of_new_uk_customers",
@@ -79,8 +79,8 @@ def preprocess_uk_bank_holiday(fsrc: str) -> pl.LazyFrame:
         .drop_nulls()
         .with_columns(pl.col("Date") + "-" + pl.col("Year"))
         .select(
-            cx.parse_date_str("Date", "%d-%B-%Y").alias("bank_holiday_date"),
-            cx.alias("Bank holiday", "bank_holiday_name"),
+            pl.col("Date").str.to_date("%d-%B-%Y").alias("bank_holiday_date"),
+            pl.col("Bank holiday").alias("bank_holiday_name"),
         )
     )
 
@@ -91,8 +91,8 @@ def preprocess_uk_new_customer(fsrc: str) -> pl.LazyFrame:
         pl.read_excel(fsrc, sheet_name="New Customers")
         .lazy()
         .select(
-            cx.parse_date_str("Date", "%m-%d-%y").alias("joined_on"),
-            cx.alias("New Customers", "number_of_new_uk_customers"),
+            pl.col("Date").str.to_date("%m-%d-%y").alias("joined_on"),
+            pl.col("New Customers").alias("number_of_new_uk_customers"),
         )
     )
 
@@ -103,9 +103,9 @@ def preprocess_roi_new_customer(fsrc: str) -> pl.LazyFrame:
         pl.read_excel(fsrc, sheet_name="ROI New Customers")
         .lazy()
         .select(
-            cx.parse_date_str("Reporting Date", "%m-%d-%y").alias("roi_reported_on"),
-            cx.alias("Reporting Month", "roi_reporting_month"),
-            cx.alias("New Customers", "number_of_new_roi_customers"),
+            pl.col("Reporting Date").str.to_date("%m-%d-%y").alias("roi_reported_on"),
+            pl.col("Reporting Month").alias("roi_reporting_month"),
+            pl.col("New Customers").alias("number_of_new_roi_customers"),
         )
     )
 
@@ -164,7 +164,7 @@ def construct_report_calendar_detail(reporting_calendar: pl.LazyFrame) -> pl.Laz
         .with_columns(pl.col("reported_on_right").dt.strftime("%b-%y"))
         .select(
             "reported_on",
-            cx.alias("reported_on_right", "reporting_month"),
+            pl.col("reported_on_right").alias("reporting_month"),
             pl.cum_count("reported_on_right")
             .over("reported_on_right")
             .alias("reporting_day"),
