@@ -24,17 +24,21 @@ def solve(input_file: str) -> pl.DataFrame:
         .otherwise(pl.lit("Medium"))
     )
 
-    return pre_student_test_score.join(
-        pre_student_attendance, on=["first_name", "last_name"]
-    ).select(
-        "student_id",
-        "last_name",
-        "first_name",
-        attendance_col.alias("prop_attendance"),
-        categorize_attendance_expr.alias("attendance_category"),
-        "subject",
-        "test_score",
-        "approximate_test_score",
+    return (
+        pre_student_test_score.join(
+            pre_student_attendance, on=["first_name", "last_name"]
+        )
+        .select(
+            "student_id",
+            "last_name",
+            "first_name",
+            attendance_col.alias("prop_attendance"),
+            categorize_attendance_expr.alias("attendance_category"),
+            "subject",
+            "test_score",
+            "approximate_test_score",
+        )
+        .collect()
     )
 
 
