@@ -1,4 +1,4 @@
-"""2023: Week 21- Prep School Grades
+"""2023: Week 21 - Prep School Grades
 
 See solution output at "output/2023/wk21_students_with_cause_for_concern.ndjson".
 """
