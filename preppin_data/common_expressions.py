@@ -1,45 +1,22 @@
 """Common Polar Expressions
 """
 
+from typing import Any
+
 import polars as pl
 
 
-def parse_str_to_bool(col_name: str, true_label: str, col_alias: str) -> pl.Expr:
-    """Convert string values in a column to boolean values based on a specified true label.
-
-    Parameters
-    ----------
-    col_name : str
-        The name of the column containing string values to be converted.
-    true_label : str
-        The label in the column indicating true values.
-    col_alias : str
-        The alias to assign to the resulting boolean column.
-
-    Returns
-    -------
-    pl.Expr
-        A Polars expression representing the transformation.
-
-    Notes
-    -----
-    This function creates a Polars expression that evaluates to True for
-    rows where the value in the specified column matches the true label,
-    and False otherwise. The resulting boolean olumn is given the specified alias.
-    """
-    return (
-        pl.when(pl.col(col_name) == true_label)
-        .then(pl.lit(True))
-        .otherwise(pl.lit(False))
-        .alias(col_alias)
-    )
+def parse_date(col_name, format: str, **kwargs) -> pl.Expr:
+    """"""
+    return pl.col(col_name).str.to_date(format, **kwargs)
 
 
 def if_else(
     col_name: str,
-    true_val: str,
-    true_label: str,
-    false_label: str,
+    true_val: Any,
+    true_label: Any,
+    false_label: Any,
+    operator: str = "==",
 ) -> pl.Expr:
     """
     Return an expression representing an if-else conditional logic for a
@@ -49,22 +26,17 @@ def if_else(
     ----------
     col_name : str
         The name of the column to apply the conditional logic to.
-    true_val : str
+    true_val : Any
         The value to compare against in the conditional logic.
-    true_label : str
+    true_label : Any
         The label to assign to rows where the condition is true.
-    false_label : str
+    false_label : Any
         The label to assign to rows where the condition is false.
 
     Returns
     -------
     pl.Expr
         An expression representing the if-else conditional logic.
-
-    Raises
-    ------
-    ValueError
-        If an invalid operator is provided or if true_val is not a string, or if true_label or false_label are not strings.
 
     Examples
     --------
@@ -89,14 +61,26 @@ def if_else(
     │ is_not_three │
     └──────────────┘
     """
-    if not isinstance(true_val, str):
-        raise ValueError("True value must be a string.")
+    pred_expr = get_predicate_expr(col_name, operator, true_val)
 
-    if not isinstance(true_label, str) or not isinstance(false_label, str):
-        raise ValueError("Labels must be strings.")
+    return pl.when(pred_expr).then(pl.lit(true_label)).otherwise(pl.lit(false_label))
 
-    return (
-        pl.when(pl.col(col_name) == true_val)
-        .then(pl.lit(true_label))
-        .otherwise(pl.lit(false_label))
-    )
+
+def get_predicate_expr(col_name: str, operator: str, true_val: Any) -> pl.Expr:
+    """"""
+    col_expr = pl.col(col_name)
+    match operator:
+        case "==":
+            return col_expr == true_val
+        case "<":
+            return col_expr < true_val
+        case "<=":
+            return col_expr <= true_val
+        case ">=":
+            return col_expr >= true_val
+        case ">":
+            return col_expr > true_val
+        case "in":
+            return col_expr.is_in(set(true_val))
+        case _:
+            raise NotImplementedError(f"Operator {operator} is not yet implemented.")
