@@ -1,7 +1,7 @@
-""" 2023: Week 24 - Is it the teacher or the student? Part II
+"""2023: Week 24 - Is it the teacher or the student? Part II
 
 
-See solution output at "output/2023/wk24_lowest_ranked_class_by_subject.ndjson".
+See solution output at "output/2023/wk24_low_performing_students.ndjson".
 """
 
 import polars as pl
@@ -11,7 +11,7 @@ from .. import common_expressions as cx
 
 
 def solve(input_file: str) -> pl.DataFrame:
-    """Solve challenge 22 of Preppin' Data 2023."""
+    """Solve challenge 24 of Preppin' Data 2023."""
     # Preprocess the data
     student_info = preprocess_student_info(input_file)
     result = preprocess_result(input_file)

@@ -8,7 +8,7 @@ import polars as pl
 
 
 def solve(input_file: str) -> pl.DataFrame:
-    """Solve challenge 22 of Preppin' Data 2023."""
+    """Solve challenge 23 of Preppin' Data 2023."""
     # Preprocess the data
     student_info = preprocess_student_info(input_file)
     result = preprocess_result(input_file)
