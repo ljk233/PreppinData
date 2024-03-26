@@ -1,6 +1,5 @@
 """2023: Week 25 - Prep School 2023 Admissions - Part 1
 
-
 See solution output at "output/2023/wk25_student_admission_1.ndjson").
 """
 

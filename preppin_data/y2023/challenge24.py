@@ -1,6 +1,5 @@
 """2023: Week 24 - Is it the teacher or the student? Part II
 
-
 See solution output at "output/2023/wk24_low_performing_students.ndjson".
 """
 

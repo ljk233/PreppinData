@@ -1,6 +1,5 @@
 """2023: Week 23 - Is it the teacher or the student? Part I
 
-
 See solution output at "output/2023/wk23_lowest_ranked_class_by_subject.ndjson".
 """
 
