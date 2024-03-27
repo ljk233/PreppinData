@@ -3,8 +3,6 @@
 See solution output at "output/2023/wk30_financial_quarterly_analysis.ndjson".
 """
 
-from datetime import date
-
 import polars as pl
 
 
