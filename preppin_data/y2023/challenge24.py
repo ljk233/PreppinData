@@ -6,7 +6,6 @@ See solution output at "output/2023/wk24_low_performing_students.ndjson".
 import polars as pl
 
 from .challenge23 import preprocess_student_info, preprocess_result
-from .. import common_expressions as cx
 
 
 def solve(input_file: str) -> pl.DataFrame:

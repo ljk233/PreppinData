@@ -1,11 +1,9 @@
 """2023: Week 27 - The Cost of Running the Prep School
 
-See solution output at "output/2023/wk27_school_cost.ndjson").
+See solution output at "output/2023/wk27_school_cost.ndjson".
 """
 
 import polars as pl
-
-from .. import common_expressions as cx
 
 
 def solve(input_fsrc: str) -> pl.DataFrame:
