@@ -1,6 +1,6 @@
 """2023: Week 28 - Prep School Track Team
 
-See solution output at "output/2023/wk28_top_athletes.ndjson").
+See solution output at "output/2023/wk28_top_athletes.ndjson".
 """
 
 import polars as pl

@@ -1,6 +1,6 @@
 """2023: Week 29 - Moving Averages
 
-See solution output at "output/2023/wk29_rolling_monthly_profit.ndjson").
+See solution output at "output/2023/wk29_rolling_monthly_profit.ndjson".
 """
 
 from datetime import date

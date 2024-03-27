@@ -1,6 +1,6 @@
 """2023: Week 26 - Prep School 2023 Admissions - Part 2
 
-See solution output at "output/2023/wk26_student_admission_2.ndjson").
+See solution output at "output/2023/wk26_student_admission_2.ndjson".
 """
 
 import polars as pl
