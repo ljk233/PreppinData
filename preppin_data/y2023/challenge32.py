@@ -2,7 +2,7 @@
 
 See solution output at:
 
-- "output/2023/wk32_employee_age.ndjson"
+- "output/2023/wk32_employee_generation.ndjson"
 - "output/2023/wk32_monthly_snapshot_with_age_range.ndjson"
 """
 
@@ -99,16 +99,18 @@ def transform_employee(
 ) -> pl.DataFrame:
     """Transform the employee data by appending the employee's generation."""
     # Expressions
-    filter_generation_pred_expr = pl.col("born_on").is_null() | pl.col(
-        "born_on"
-    ).dt.year().is_between("start_year", "end_year")
+    filter_generation_pred_expr = pl.col("born_on").is_null() | (
+        pl.col("born_on").dt.year().is_between("start_year", "end_year")
+    )
 
     return (
         employee.join(pre_generation, how="cross")
         .filter(filter_generation_pred_expr)
-        .with_columns(switch_null_born_on("generation_descr"))
+        .with_columns(
+            switch_null_born_on("generation_descr").alias("employee_generation_descr")
+        )
         .unique("employee_id")
-        .drop("generation", "source", "start_year", "end_year", "generation_descr")
+        .drop("generation", "source", "start_year", "end_year", "geberation_descr")
     )
 
 
