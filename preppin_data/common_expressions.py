@@ -132,3 +132,51 @@ def approx_years_between(start_date_col: str, end_date_col: str) -> pl.Expr:
     duration = pl.col(end_date_col) - pl.col(start_date_col)
 
     return duration.dt.total_days() / 365.25
+
+
+def approx_months_between(start_date_col: str, end_date_col: str) -> pl.Expr:
+    """Return the approximate months between the start and end date.
+
+    Parameters
+    ----------
+    start_date_col : str
+        The name of the column containing the start dates.
+    end_date_col : str
+        The name of the column containing the end dates.
+
+    Returns
+    -------
+    pl.Expr
+        A Polars expression representing the approximate difference in months.
+
+    Examples
+    --------
+    >>> import polars as pl
+    >>>
+    >>> # Example usage
+    >>> start_date = ["2020-01-01", "2023-07-01"]
+    >>> end_date = ["2021-01-01", "2025-06-30"]
+    >>>
+    >>> df = pl.DataFrame({
+    ...     "start_date": start_date,
+    ...     "end_date": end_date
+    ... })
+    >>>
+    >>> approx_month_expr = approx_month_between("start_date", "end_date")
+    >>> result = df.select([
+    ...     approx_month_expr.alias("approx_months_between")
+    ... ])
+    >>>
+    >>> print(result)
+    shape: (2, 1)
+    ┌──────────────────────┐
+    │ approx_months_between│
+    │ float64              │
+    │ ---                  │
+    │ 12.0                 │
+    │ 18.329394616840275   │
+    └──────────────────────┘
+    """
+    duration = pl.col(end_date_col) - pl.col(start_date_col)
+
+    return 12 * duration.dt.total_days() / 365.25
