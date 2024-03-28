@@ -15,7 +15,24 @@ from .. import common_expressions as cx
 def solve(
     employee_fsrc: str, monthly_snapshot_fsrc: str, generation_fsrc: str
 ) -> tuple[pl.DataFrame, pl.DataFrame]:
-    """Solve challenge 32 of Preppin' Data 2023."""
+    """Solves challenge 33 of Preppin' Data 2023.
+
+    Parameters
+    ----------
+    employee_fsrc : str
+        Filepath of the employee data source.
+    monthly_snapshot_fsrc : str
+        Filepath of the monthly snapshot data source.
+    generation_fsrc : str
+        Filepath of the generation data source.
+
+    Returns
+    -------
+    tuple[pl.DataFrame, pl.DataFrame]
+        A tuple containing two polars DataFrames:
+            1. Monthly snapshot with tenure information added.
+            2. Aggregated demographic data based on the monthly snapshot.
+    """
     # Load the solution from challenge 31
     employee_generation, monthly_snapshot_age_range = challenge32.solve(
         employee_fsrc, monthly_snapshot_fsrc, generation_fsrc
@@ -32,23 +49,22 @@ def solve(
     return monthly_snapshot_with_tenure, aggregate_demographics
 
 
-def create_distribution_center_reporting_month(
-    monthly_snapshot: pl.DataFrame,
-) -> pl.DataFrame:
-    """Identify the earliest and last months where a distribution center
-    appears in the monthly snapshot.
-    """
-    return monthly_snapshot.group_by("distribution_center").agg(
-        pl.min("last_day_of_month").alias("earliest_last_day_of_month"),
-        pl.max("last_day_of_month").alias("latest_last_day_of_month"),
-    )
-
-
 def append_tenure(monthly_snapshot: pl.DataFrame) -> pl.DataFrame:
-    """Transform the monthly snapshot data to include the tenure in years
-    and months.
+    """Transforms the monthly snapshot data to include tenure information.
+
+    Parameters
+    ----------
+    monthly_snapshot : pl.DataFrame
+        Array containing monthly snapshot data.
+
+    Returns
+    -------
+    pl.DataFrame
+        Array with additional columns 'selected_date', 'tenure_years', and
+        'tenure_months' added.
     """
-    # Expression
+    # Expressions
+    # Select last_day_of_month or left_on, whichever is earliest
     selected_date_expr = (
         pl.when(pl.col("left_on").is_null())
         .then("last_day_of_month")
@@ -57,6 +73,7 @@ def append_tenure(monthly_snapshot: pl.DataFrame) -> pl.DataFrame:
         .otherwise("left_on")
     )
 
+    # Calculate the tenure in years and months
     tenure_years_expr = (
         cx.approx_years_between("hired_on", "selected_date").floor().cast(pl.Int64)
     )
@@ -76,9 +93,25 @@ def append_tenure(monthly_snapshot: pl.DataFrame) -> pl.DataFrame:
 def aggregate_data(
     monthly_snapshot: pl.DataFrame,
     employee_generation: pl.DataFrame,
-    # distribution_reporting_month: pl.DataFrame,
 ) -> pl.DataFrame:
-    """Summarise the demographics of the monthly snapshot."""
+    """Summarizes the demographics of the monthly snapshot.
+
+    Parameters
+    ----------
+    monthly_snapshot : np.ndarray
+        Array containing monthly snapshot data.
+    employee_generation : np.ndarray
+        Array containing employee generation data.
+    distribution_reporting_month : np.ndarray
+        Array containing distribution center reporting month data.
+
+    Returns
+    -------
+    np.ndarray
+        Array summarizing the demographic data with columns:
+            'distribution_center', 'last_day_of_month', 'demographic_type',
+            'demographic_detail', and 'number_of_employees'.
+    """
     # Observed aggregate the data
     demographic_summary = (
         monthly_snapshot.join(employee_generation, on="employee_id")
