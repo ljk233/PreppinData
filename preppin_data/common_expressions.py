@@ -84,3 +84,51 @@ def get_predicate_expr(col_name: str, operator: str, true_val: Any) -> pl.Expr:
             return col_expr.is_in(set(true_val))
         case _:
             raise NotImplementedError(f"Operator {operator} is not yet implemented.")
+
+
+def approx_years_between(start_date_col: str, end_date_col: str) -> pl.Expr:
+    """Return the approximate years between the start and end date.
+
+    Parameters
+    ----------
+    start_date_col : str
+        The name of the column containing the start dates.
+    end_date_col : str
+        The name of the column containing the end dates.
+
+    Returns
+    -------
+    pl.Expr
+        A Polars expression representing the approximate difference in years.
+
+    Examples
+    --------
+    >>> import polars as pl
+    >>>
+    >>> # Example usage
+    >>> start_date = ["2020-01-01", "2023-07-01"]
+    >>> end_date = ["2021-01-01", "2025-06-30"]
+    >>>
+    >>> df = pl.DataFrame({
+    ...     "start_date": start_date,
+    ...     "end_date": end_date
+    ... })
+    >>>
+    >>> approx_years_expr = approx_years_between("start_date", "end_date")
+    >>> result = df.select([
+    ...     approx_years_expr.alias("approx_years_between")
+    ... ])
+    >>>
+    >>> print(result)
+    shape: (2, 1)
+    ┌─────────────────────┐
+    │ approx_years_between│
+    │ int                 │
+    │ ---                 │
+    │ 1.0                 │
+    │ 1.4997241665518486  │
+    └─────────────────────┘
+    """
+    duration = pl.col(end_date_col) - pl.col(start_date_col)
+
+    return duration.dt.total_days() / 365.25
