@@ -1,0 +1,436 @@
+{"team_name":"Chelsea","player_id":1,"total_matches_played":77,"tournament_date":"2023-01-15","player_experience":65,"matches_played":4}
+{"team_name":"Chelsea","player_id":1,"total_matches_played":77,"tournament_date":"2023-02-12","player_experience":69,"matches_played":4}
+{"team_name":"Chelsea","player_id":1,"total_matches_played":77,"tournament_date":"2023-03-26","player_experience":70,"matches_played":1}
+{"team_name":"Chelsea","player_id":1,"total_matches_played":77,"tournament_date":"2023-04-09","player_experience":72,"matches_played":2}
+{"team_name":"Chelsea","player_id":1,"total_matches_played":77,"tournament_date":"2023-04-23","player_experience":73,"matches_played":1}
+{"team_name":"Chelsea","player_id":1,"total_matches_played":77,"tournament_date":"2023-05-21","player_experience":77,"matches_played":4}
+{"team_name":"Chelsea","player_id":2,"total_matches_played":76,"tournament_date":"2023-01-15","player_experience":55,"matches_played":3}
+{"team_name":"Chelsea","player_id":2,"total_matches_played":76,"tournament_date":"2023-01-29","player_experience":60,"matches_played":5}
+{"team_name":"Chelsea","player_id":2,"total_matches_played":76,"tournament_date":"2023-02-12","player_experience":63,"matches_played":3}
+{"team_name":"Chelsea","player_id":2,"total_matches_played":76,"tournament_date":"2023-02-26","player_experience":66,"matches_played":3}
+{"team_name":"Chelsea","player_id":2,"total_matches_played":76,"tournament_date":"2023-03-26","player_experience":69,"matches_played":3}
+{"team_name":"Chelsea","player_id":2,"total_matches_played":76,"tournament_date":"2023-04-09","player_experience":71,"matches_played":2}
+{"team_name":"Chelsea","player_id":2,"total_matches_played":76,"tournament_date":"2023-04-23","player_experience":75,"matches_played":4}
+{"team_name":"Chelsea","player_id":2,"total_matches_played":76,"tournament_date":"2023-05-21","player_experience":76,"matches_played":1}
+{"team_name":"Chelsea","player_id":3,"total_matches_played":86,"tournament_date":"2023-01-15","player_experience":68,"matches_played":2}
+{"team_name":"Chelsea","player_id":3,"total_matches_played":86,"tournament_date":"2023-01-29","player_experience":71,"matches_played":3}
+{"team_name":"Chelsea","player_id":3,"total_matches_played":86,"tournament_date":"2023-02-26","player_experience":72,"matches_played":1}
+{"team_name":"Chelsea","player_id":3,"total_matches_played":86,"tournament_date":"2023-03-12","player_experience":74,"matches_played":2}
+{"team_name":"Chelsea","player_id":3,"total_matches_played":86,"tournament_date":"2023-03-26","player_experience":79,"matches_played":5}
+{"team_name":"Chelsea","player_id":3,"total_matches_played":86,"tournament_date":"2023-04-23","player_experience":80,"matches_played":1}
+{"team_name":"Chelsea","player_id":3,"total_matches_played":86,"tournament_date":"2023-05-07","player_experience":85,"matches_played":5}
+{"team_name":"Chelsea","player_id":3,"total_matches_played":86,"tournament_date":"2023-05-21","player_experience":86,"matches_played":1}
+{"team_name":"Chelsea","player_id":4,"total_matches_played":121,"tournament_date":"2023-01-29","player_experience":95,"matches_played":3}
+{"team_name":"Chelsea","player_id":4,"total_matches_played":121,"tournament_date":"2023-02-12","player_experience":98,"matches_played":3}
+{"team_name":"Chelsea","player_id":4,"total_matches_played":121,"tournament_date":"2023-02-26","player_experience":101,"matches_played":3}
+{"team_name":"Chelsea","player_id":4,"total_matches_played":121,"tournament_date":"2023-03-12","player_experience":106,"matches_played":5}
+{"team_name":"Chelsea","player_id":4,"total_matches_played":121,"tournament_date":"2023-03-26","player_experience":109,"matches_played":3}
+{"team_name":"Chelsea","player_id":4,"total_matches_played":121,"tournament_date":"2023-04-09","player_experience":112,"matches_played":3}
+{"team_name":"Chelsea","player_id":4,"total_matches_played":121,"tournament_date":"2023-04-23","player_experience":116,"matches_played":4}
+{"team_name":"Chelsea","player_id":4,"total_matches_played":121,"tournament_date":"2023-05-07","player_experience":121,"matches_played":5}
+{"team_name":"Chelsea","player_id":5,"total_matches_played":84,"tournament_date":"2023-02-12","player_experience":70,"matches_played":1}
+{"team_name":"Chelsea","player_id":5,"total_matches_played":84,"tournament_date":"2023-02-26","player_experience":72,"matches_played":2}
+{"team_name":"Chelsea","player_id":5,"total_matches_played":84,"tournament_date":"2023-03-12","player_experience":74,"matches_played":2}
+{"team_name":"Chelsea","player_id":5,"total_matches_played":84,"tournament_date":"2023-04-09","player_experience":78,"matches_played":4}
+{"team_name":"Chelsea","player_id":5,"total_matches_played":84,"tournament_date":"2023-04-23","player_experience":82,"matches_played":4}
+{"team_name":"Chelsea","player_id":5,"total_matches_played":84,"tournament_date":"2023-05-21","player_experience":84,"matches_played":2}
+{"team_name":"Chelsea","player_id":6,"total_matches_played":148,"tournament_date":"2023-01-29","player_experience":133,"matches_played":3}
+{"team_name":"Chelsea","player_id":6,"total_matches_played":148,"tournament_date":"2023-02-26","player_experience":136,"matches_played":3}
+{"team_name":"Chelsea","player_id":6,"total_matches_played":148,"tournament_date":"2023-03-26","player_experience":140,"matches_played":4}
+{"team_name":"Chelsea","player_id":6,"total_matches_played":148,"tournament_date":"2023-04-09","player_experience":143,"matches_played":3}
+{"team_name":"Chelsea","player_id":6,"total_matches_played":148,"tournament_date":"2023-04-23","player_experience":148,"matches_played":5}
+{"team_name":"Chelsea","player_id":7,"total_matches_played":36,"tournament_date":"2023-01-29","player_experience":14,"matches_played":1}
+{"team_name":"Chelsea","player_id":7,"total_matches_played":36,"tournament_date":"2023-02-12","player_experience":17,"matches_played":3}
+{"team_name":"Chelsea","player_id":7,"total_matches_played":36,"tournament_date":"2023-03-12","player_experience":21,"matches_played":4}
+{"team_name":"Chelsea","player_id":7,"total_matches_played":36,"tournament_date":"2023-04-09","player_experience":25,"matches_played":4}
+{"team_name":"Chelsea","player_id":7,"total_matches_played":36,"tournament_date":"2023-04-23","player_experience":26,"matches_played":1}
+{"team_name":"Chelsea","player_id":7,"total_matches_played":36,"tournament_date":"2023-05-07","player_experience":31,"matches_played":5}
+{"team_name":"Chelsea","player_id":7,"total_matches_played":36,"tournament_date":"2023-05-21","player_experience":36,"matches_played":5}
+{"team_name":"Chelsea","player_id":8,"total_matches_played":20,"tournament_date":"2023-01-15","player_experience":7,"matches_played":1}
+{"team_name":"Chelsea","player_id":8,"total_matches_played":20,"tournament_date":"2023-02-12","player_experience":11,"matches_played":4}
+{"team_name":"Chelsea","player_id":8,"total_matches_played":20,"tournament_date":"2023-04-09","player_experience":16,"matches_played":5}
+{"team_name":"Chelsea","player_id":8,"total_matches_played":20,"tournament_date":"2023-05-07","player_experience":19,"matches_played":3}
+{"team_name":"Chelsea","player_id":8,"total_matches_played":20,"tournament_date":"2023-05-21","player_experience":20,"matches_played":1}
+{"team_name":"Chelsea","player_id":9,"total_matches_played":39,"tournament_date":"2023-01-29","player_experience":21,"matches_played":1}
+{"team_name":"Chelsea","player_id":9,"total_matches_played":39,"tournament_date":"2023-02-12","player_experience":24,"matches_played":3}
+{"team_name":"Chelsea","player_id":9,"total_matches_played":39,"tournament_date":"2023-02-26","player_experience":25,"matches_played":1}
+{"team_name":"Chelsea","player_id":9,"total_matches_played":39,"tournament_date":"2023-03-12","player_experience":29,"matches_played":4}
+{"team_name":"Chelsea","player_id":9,"total_matches_played":39,"tournament_date":"2023-03-26","player_experience":33,"matches_played":4}
+{"team_name":"Chelsea","player_id":9,"total_matches_played":39,"tournament_date":"2023-04-09","player_experience":36,"matches_played":3}
+{"team_name":"Chelsea","player_id":9,"total_matches_played":39,"tournament_date":"2023-05-07","player_experience":37,"matches_played":1}
+{"team_name":"Chelsea","player_id":9,"total_matches_played":39,"tournament_date":"2023-05-21","player_experience":39,"matches_played":2}
+{"team_name":"Chelsea","player_id":10,"total_matches_played":50,"tournament_date":"2023-01-15","player_experience":29,"matches_played":5}
+{"team_name":"Chelsea","player_id":10,"total_matches_played":50,"tournament_date":"2023-01-29","player_experience":34,"matches_played":5}
+{"team_name":"Chelsea","player_id":10,"total_matches_played":50,"tournament_date":"2023-02-26","player_experience":38,"matches_played":4}
+{"team_name":"Chelsea","player_id":10,"total_matches_played":50,"tournament_date":"2023-03-12","player_experience":42,"matches_played":4}
+{"team_name":"Chelsea","player_id":10,"total_matches_played":50,"tournament_date":"2023-04-23","player_experience":43,"matches_played":1}
+{"team_name":"Chelsea","player_id":10,"total_matches_played":50,"tournament_date":"2023-05-07","player_experience":46,"matches_played":3}
+{"team_name":"Chelsea","player_id":10,"total_matches_played":50,"tournament_date":"2023-05-21","player_experience":50,"matches_played":4}
+{"team_name":"Chelsea","player_id":11,"total_matches_played":49,"tournament_date":"2023-01-15","player_experience":35,"matches_played":5}
+{"team_name":"Chelsea","player_id":11,"total_matches_played":49,"tournament_date":"2023-02-12","player_experience":38,"matches_played":3}
+{"team_name":"Chelsea","player_id":11,"total_matches_played":49,"tournament_date":"2023-02-26","player_experience":41,"matches_played":3}
+{"team_name":"Chelsea","player_id":11,"total_matches_played":49,"tournament_date":"2023-03-26","player_experience":43,"matches_played":2}
+{"team_name":"Chelsea","player_id":11,"total_matches_played":49,"tournament_date":"2023-04-23","player_experience":46,"matches_played":3}
+{"team_name":"Chelsea","player_id":11,"total_matches_played":49,"tournament_date":"2023-05-07","player_experience":49,"matches_played":3}
+{"team_name":"Dulwich","player_id":1,"total_matches_played":123,"tournament_date":"2023-01-29","player_experience":100,"matches_played":3}
+{"team_name":"Dulwich","player_id":1,"total_matches_played":123,"tournament_date":"2023-02-12","player_experience":104,"matches_played":4}
+{"team_name":"Dulwich","player_id":1,"total_matches_played":123,"tournament_date":"2023-02-26","player_experience":109,"matches_played":5}
+{"team_name":"Dulwich","player_id":1,"total_matches_played":123,"tournament_date":"2023-03-12","player_experience":114,"matches_played":5}
+{"team_name":"Dulwich","player_id":1,"total_matches_played":123,"tournament_date":"2023-03-26","player_experience":117,"matches_played":3}
+{"team_name":"Dulwich","player_id":1,"total_matches_played":123,"tournament_date":"2023-04-09","player_experience":118,"matches_played":1}
+{"team_name":"Dulwich","player_id":1,"total_matches_played":123,"tournament_date":"2023-04-23","player_experience":122,"matches_played":4}
+{"team_name":"Dulwich","player_id":1,"total_matches_played":123,"tournament_date":"2023-05-07","player_experience":123,"matches_played":1}
+{"team_name":"Dulwich","player_id":2,"total_matches_played":145,"tournament_date":"2023-01-15","player_experience":123,"matches_played":2}
+{"team_name":"Dulwich","player_id":2,"total_matches_played":145,"tournament_date":"2023-01-29","player_experience":126,"matches_played":3}
+{"team_name":"Dulwich","player_id":2,"total_matches_played":145,"tournament_date":"2023-02-12","player_experience":130,"matches_played":4}
+{"team_name":"Dulwich","player_id":2,"total_matches_played":145,"tournament_date":"2023-03-12","player_experience":133,"matches_played":3}
+{"team_name":"Dulwich","player_id":2,"total_matches_played":145,"tournament_date":"2023-03-26","player_experience":135,"matches_played":2}
+{"team_name":"Dulwich","player_id":2,"total_matches_played":145,"tournament_date":"2023-04-09","player_experience":140,"matches_played":5}
+{"team_name":"Dulwich","player_id":2,"total_matches_played":145,"tournament_date":"2023-04-23","player_experience":143,"matches_played":3}
+{"team_name":"Dulwich","player_id":2,"total_matches_played":145,"tournament_date":"2023-05-07","player_experience":145,"matches_played":2}
+{"team_name":"Dulwich","player_id":3,"total_matches_played":28,"tournament_date":"2023-01-15","player_experience":19,"matches_played":3}
+{"team_name":"Dulwich","player_id":3,"total_matches_played":28,"tournament_date":"2023-01-29","player_experience":21,"matches_played":2}
+{"team_name":"Dulwich","player_id":3,"total_matches_played":28,"tournament_date":"2023-02-12","player_experience":22,"matches_played":1}
+{"team_name":"Dulwich","player_id":3,"total_matches_played":28,"tournament_date":"2023-02-26","player_experience":23,"matches_played":1}
+{"team_name":"Dulwich","player_id":3,"total_matches_played":28,"tournament_date":"2023-04-23","player_experience":24,"matches_played":1}
+{"team_name":"Dulwich","player_id":3,"total_matches_played":28,"tournament_date":"2023-05-21","player_experience":28,"matches_played":4}
+{"team_name":"Dulwich","player_id":4,"total_matches_played":53,"tournament_date":"2023-01-15","player_experience":29,"matches_played":3}
+{"team_name":"Dulwich","player_id":4,"total_matches_played":53,"tournament_date":"2023-02-26","player_experience":34,"matches_played":5}
+{"team_name":"Dulwich","player_id":4,"total_matches_played":53,"tournament_date":"2023-03-12","player_experience":39,"matches_played":5}
+{"team_name":"Dulwich","player_id":4,"total_matches_played":53,"tournament_date":"2023-03-26","player_experience":43,"matches_played":4}
+{"team_name":"Dulwich","player_id":4,"total_matches_played":53,"tournament_date":"2023-04-23","player_experience":48,"matches_played":5}
+{"team_name":"Dulwich","player_id":4,"total_matches_played":53,"tournament_date":"2023-05-07","player_experience":50,"matches_played":2}
+{"team_name":"Dulwich","player_id":4,"total_matches_played":53,"tournament_date":"2023-05-21","player_experience":53,"matches_played":3}
+{"team_name":"Dulwich","player_id":5,"total_matches_played":31,"tournament_date":"2023-01-15","player_experience":15,"matches_played":4}
+{"team_name":"Dulwich","player_id":5,"total_matches_played":31,"tournament_date":"2023-01-29","player_experience":17,"matches_played":2}
+{"team_name":"Dulwich","player_id":5,"total_matches_played":31,"tournament_date":"2023-02-12","player_experience":19,"matches_played":2}
+{"team_name":"Dulwich","player_id":5,"total_matches_played":31,"tournament_date":"2023-03-12","player_experience":23,"matches_played":4}
+{"team_name":"Dulwich","player_id":5,"total_matches_played":31,"tournament_date":"2023-03-26","player_experience":27,"matches_played":4}
+{"team_name":"Dulwich","player_id":5,"total_matches_played":31,"tournament_date":"2023-05-07","player_experience":31,"matches_played":4}
+{"team_name":"Dulwich","player_id":6,"total_matches_played":54,"tournament_date":"2023-01-15","player_experience":29,"matches_played":4}
+{"team_name":"Dulwich","player_id":6,"total_matches_played":54,"tournament_date":"2023-01-29","player_experience":33,"matches_played":4}
+{"team_name":"Dulwich","player_id":6,"total_matches_played":54,"tournament_date":"2023-02-26","player_experience":38,"matches_played":5}
+{"team_name":"Dulwich","player_id":6,"total_matches_played":54,"tournament_date":"2023-03-26","player_experience":43,"matches_played":5}
+{"team_name":"Dulwich","player_id":6,"total_matches_played":54,"tournament_date":"2023-04-09","player_experience":44,"matches_played":1}
+{"team_name":"Dulwich","player_id":6,"total_matches_played":54,"tournament_date":"2023-04-23","player_experience":46,"matches_played":2}
+{"team_name":"Dulwich","player_id":6,"total_matches_played":54,"tournament_date":"2023-05-07","player_experience":50,"matches_played":4}
+{"team_name":"Dulwich","player_id":6,"total_matches_played":54,"tournament_date":"2023-05-21","player_experience":54,"matches_played":4}
+{"team_name":"Dulwich","player_id":7,"total_matches_played":25,"tournament_date":"2023-01-15","player_experience":9,"matches_played":2}
+{"team_name":"Dulwich","player_id":7,"total_matches_played":25,"tournament_date":"2023-01-29","player_experience":10,"matches_played":1}
+{"team_name":"Dulwich","player_id":7,"total_matches_played":25,"tournament_date":"2023-03-26","player_experience":12,"matches_played":2}
+{"team_name":"Dulwich","player_id":7,"total_matches_played":25,"tournament_date":"2023-04-09","player_experience":17,"matches_played":5}
+{"team_name":"Dulwich","player_id":7,"total_matches_played":25,"tournament_date":"2023-04-23","player_experience":21,"matches_played":4}
+{"team_name":"Dulwich","player_id":7,"total_matches_played":25,"tournament_date":"2023-05-07","player_experience":25,"matches_played":4}
+{"team_name":"Dulwich","player_id":8,"total_matches_played":66,"tournament_date":"2023-01-29","player_experience":50,"matches_played":5}
+{"team_name":"Dulwich","player_id":8,"total_matches_played":66,"tournament_date":"2023-02-26","player_experience":52,"matches_played":2}
+{"team_name":"Dulwich","player_id":8,"total_matches_played":66,"tournament_date":"2023-03-12","player_experience":54,"matches_played":2}
+{"team_name":"Dulwich","player_id":8,"total_matches_played":66,"tournament_date":"2023-03-26","player_experience":57,"matches_played":3}
+{"team_name":"Dulwich","player_id":8,"total_matches_played":66,"tournament_date":"2023-04-09","player_experience":62,"matches_played":5}
+{"team_name":"Dulwich","player_id":8,"total_matches_played":66,"tournament_date":"2023-05-07","player_experience":63,"matches_played":1}
+{"team_name":"Dulwich","player_id":8,"total_matches_played":66,"tournament_date":"2023-05-21","player_experience":66,"matches_played":3}
+{"team_name":"Dulwich","player_id":9,"total_matches_played":70,"tournament_date":"2023-01-15","player_experience":49,"matches_played":3}
+{"team_name":"Dulwich","player_id":9,"total_matches_played":70,"tournament_date":"2023-02-12","player_experience":52,"matches_played":3}
+{"team_name":"Dulwich","player_id":9,"total_matches_played":70,"tournament_date":"2023-02-26","player_experience":55,"matches_played":3}
+{"team_name":"Dulwich","player_id":9,"total_matches_played":70,"tournament_date":"2023-03-12","player_experience":60,"matches_played":5}
+{"team_name":"Dulwich","player_id":9,"total_matches_played":70,"tournament_date":"2023-03-26","player_experience":63,"matches_played":3}
+{"team_name":"Dulwich","player_id":9,"total_matches_played":70,"tournament_date":"2023-05-07","player_experience":66,"matches_played":3}
+{"team_name":"Dulwich","player_id":9,"total_matches_played":70,"tournament_date":"2023-05-21","player_experience":70,"matches_played":4}
+{"team_name":"Dulwich","player_id":10,"total_matches_played":136,"tournament_date":"2023-03-12","player_experience":126,"matches_played":2}
+{"team_name":"Dulwich","player_id":10,"total_matches_played":136,"tournament_date":"2023-03-26","player_experience":129,"matches_played":3}
+{"team_name":"Dulwich","player_id":10,"total_matches_played":136,"tournament_date":"2023-04-23","player_experience":133,"matches_played":4}
+{"team_name":"Dulwich","player_id":10,"total_matches_played":136,"tournament_date":"2023-05-07","player_experience":136,"matches_played":3}
+{"team_name":"Dulwich","player_id":11,"total_matches_played":130,"tournament_date":"2023-02-26","player_experience":126,"matches_played":5}
+{"team_name":"Dulwich","player_id":11,"total_matches_played":130,"tournament_date":"2023-03-12","player_experience":127,"matches_played":1}
+{"team_name":"Dulwich","player_id":11,"total_matches_played":130,"tournament_date":"2023-04-09","player_experience":128,"matches_played":1}
+{"team_name":"Dulwich","player_id":11,"total_matches_played":130,"tournament_date":"2023-05-07","player_experience":129,"matches_played":1}
+{"team_name":"Dulwich","player_id":11,"total_matches_played":130,"tournament_date":"2023-05-21","player_experience":130,"matches_played":1}
+{"team_name":"Lewisham","player_id":1,"total_matches_played":84,"tournament_date":"2023-01-15","player_experience":70,"matches_played":5}
+{"team_name":"Lewisham","player_id":1,"total_matches_played":84,"tournament_date":"2023-02-12","player_experience":73,"matches_played":3}
+{"team_name":"Lewisham","player_id":1,"total_matches_played":84,"tournament_date":"2023-03-12","player_experience":76,"matches_played":3}
+{"team_name":"Lewisham","player_id":1,"total_matches_played":84,"tournament_date":"2023-03-26","player_experience":79,"matches_played":3}
+{"team_name":"Lewisham","player_id":1,"total_matches_played":84,"tournament_date":"2023-04-23","player_experience":82,"matches_played":3}
+{"team_name":"Lewisham","player_id":1,"total_matches_played":84,"tournament_date":"2023-05-07","player_experience":83,"matches_played":1}
+{"team_name":"Lewisham","player_id":1,"total_matches_played":84,"tournament_date":"2023-05-21","player_experience":84,"matches_played":1}
+{"team_name":"Lewisham","player_id":2,"total_matches_played":66,"tournament_date":"2023-01-15","player_experience":48,"matches_played":5}
+{"team_name":"Lewisham","player_id":2,"total_matches_played":66,"tournament_date":"2023-01-29","player_experience":50,"matches_played":2}
+{"team_name":"Lewisham","player_id":2,"total_matches_played":66,"tournament_date":"2023-02-26","player_experience":53,"matches_played":3}
+{"team_name":"Lewisham","player_id":2,"total_matches_played":66,"tournament_date":"2023-03-26","player_experience":56,"matches_played":3}
+{"team_name":"Lewisham","player_id":2,"total_matches_played":66,"tournament_date":"2023-04-09","player_experience":61,"matches_played":5}
+{"team_name":"Lewisham","player_id":2,"total_matches_played":66,"tournament_date":"2023-05-07","player_experience":66,"matches_played":5}
+{"team_name":"Lewisham","player_id":3,"total_matches_played":62,"tournament_date":"2023-01-29","player_experience":38,"matches_played":3}
+{"team_name":"Lewisham","player_id":3,"total_matches_played":62,"tournament_date":"2023-02-12","player_experience":41,"matches_played":3}
+{"team_name":"Lewisham","player_id":3,"total_matches_played":62,"tournament_date":"2023-02-26","player_experience":46,"matches_played":5}
+{"team_name":"Lewisham","player_id":3,"total_matches_played":62,"tournament_date":"2023-03-12","player_experience":51,"matches_played":5}
+{"team_name":"Lewisham","player_id":3,"total_matches_played":62,"tournament_date":"2023-03-26","player_experience":56,"matches_played":5}
+{"team_name":"Lewisham","player_id":3,"total_matches_played":62,"tournament_date":"2023-04-09","player_experience":58,"matches_played":2}
+{"team_name":"Lewisham","player_id":3,"total_matches_played":62,"tournament_date":"2023-05-21","player_experience":62,"matches_played":4}
+{"team_name":"Lewisham","player_id":4,"total_matches_played":61,"tournament_date":"2023-01-15","player_experience":40,"matches_played":4}
+{"team_name":"Lewisham","player_id":4,"total_matches_played":61,"tournament_date":"2023-02-12","player_experience":42,"matches_played":2}
+{"team_name":"Lewisham","player_id":4,"total_matches_played":61,"tournament_date":"2023-02-26","player_experience":47,"matches_played":5}
+{"team_name":"Lewisham","player_id":4,"total_matches_played":61,"tournament_date":"2023-03-12","player_experience":49,"matches_played":2}
+{"team_name":"Lewisham","player_id":4,"total_matches_played":61,"tournament_date":"2023-03-26","player_experience":51,"matches_played":2}
+{"team_name":"Lewisham","player_id":4,"total_matches_played":61,"tournament_date":"2023-04-09","player_experience":54,"matches_played":3}
+{"team_name":"Lewisham","player_id":4,"total_matches_played":61,"tournament_date":"2023-04-23","player_experience":56,"matches_played":2}
+{"team_name":"Lewisham","player_id":4,"total_matches_played":61,"tournament_date":"2023-05-07","player_experience":57,"matches_played":1}
+{"team_name":"Lewisham","player_id":4,"total_matches_played":61,"tournament_date":"2023-05-21","player_experience":61,"matches_played":4}
+{"team_name":"Lewisham","player_id":5,"total_matches_played":73,"tournament_date":"2023-01-15","player_experience":42,"matches_played":4}
+{"team_name":"Lewisham","player_id":5,"total_matches_played":73,"tournament_date":"2023-01-29","player_experience":47,"matches_played":5}
+{"team_name":"Lewisham","player_id":5,"total_matches_played":73,"tournament_date":"2023-02-12","player_experience":52,"matches_played":5}
+{"team_name":"Lewisham","player_id":5,"total_matches_played":73,"tournament_date":"2023-02-26","player_experience":57,"matches_played":5}
+{"team_name":"Lewisham","player_id":5,"total_matches_played":73,"tournament_date":"2023-03-12","player_experience":61,"matches_played":4}
+{"team_name":"Lewisham","player_id":5,"total_matches_played":73,"tournament_date":"2023-03-26","player_experience":63,"matches_played":2}
+{"team_name":"Lewisham","player_id":5,"total_matches_played":73,"tournament_date":"2023-05-07","player_experience":68,"matches_played":5}
+{"team_name":"Lewisham","player_id":5,"total_matches_played":73,"tournament_date":"2023-05-21","player_experience":73,"matches_played":5}
+{"team_name":"Lewisham","player_id":6,"total_matches_played":80,"tournament_date":"2023-02-12","player_experience":58,"matches_played":5}
+{"team_name":"Lewisham","player_id":6,"total_matches_played":80,"tournament_date":"2023-03-12","player_experience":62,"matches_played":4}
+{"team_name":"Lewisham","player_id":6,"total_matches_played":80,"tournament_date":"2023-03-26","player_experience":66,"matches_played":4}
+{"team_name":"Lewisham","player_id":6,"total_matches_played":80,"tournament_date":"2023-04-09","player_experience":68,"matches_played":2}
+{"team_name":"Lewisham","player_id":6,"total_matches_played":80,"tournament_date":"2023-04-23","player_experience":73,"matches_played":5}
+{"team_name":"Lewisham","player_id":6,"total_matches_played":80,"tournament_date":"2023-05-07","player_experience":76,"matches_played":3}
+{"team_name":"Lewisham","player_id":6,"total_matches_played":80,"tournament_date":"2023-05-21","player_experience":80,"matches_played":4}
+{"team_name":"Lewisham","player_id":7,"total_matches_played":70,"tournament_date":"2023-01-29","player_experience":61,"matches_played":3}
+{"team_name":"Lewisham","player_id":7,"total_matches_played":70,"tournament_date":"2023-02-12","player_experience":62,"matches_played":1}
+{"team_name":"Lewisham","player_id":7,"total_matches_played":70,"tournament_date":"2023-04-23","player_experience":65,"matches_played":3}
+{"team_name":"Lewisham","player_id":7,"total_matches_played":70,"tournament_date":"2023-05-07","player_experience":66,"matches_played":1}
+{"team_name":"Lewisham","player_id":7,"total_matches_played":70,"tournament_date":"2023-05-21","player_experience":70,"matches_played":4}
+{"team_name":"Lewisham","player_id":8,"total_matches_played":70,"tournament_date":"2023-01-15","player_experience":54,"matches_played":5}
+{"team_name":"Lewisham","player_id":8,"total_matches_played":70,"tournament_date":"2023-01-29","player_experience":58,"matches_played":4}
+{"team_name":"Lewisham","player_id":8,"total_matches_played":70,"tournament_date":"2023-02-12","player_experience":59,"matches_played":1}
+{"team_name":"Lewisham","player_id":8,"total_matches_played":70,"tournament_date":"2023-03-12","player_experience":61,"matches_played":2}
+{"team_name":"Lewisham","player_id":8,"total_matches_played":70,"tournament_date":"2023-03-26","player_experience":63,"matches_played":2}
+{"team_name":"Lewisham","player_id":8,"total_matches_played":70,"tournament_date":"2023-04-23","player_experience":64,"matches_played":1}
+{"team_name":"Lewisham","player_id":8,"total_matches_played":70,"tournament_date":"2023-05-07","player_experience":69,"matches_played":5}
+{"team_name":"Lewisham","player_id":8,"total_matches_played":70,"tournament_date":"2023-05-21","player_experience":70,"matches_played":1}
+{"team_name":"Lewisham","player_id":9,"total_matches_played":95,"tournament_date":"2023-01-29","player_experience":82,"matches_played":2}
+{"team_name":"Lewisham","player_id":9,"total_matches_played":95,"tournament_date":"2023-02-12","player_experience":84,"matches_played":2}
+{"team_name":"Lewisham","player_id":9,"total_matches_played":95,"tournament_date":"2023-03-26","player_experience":89,"matches_played":5}
+{"team_name":"Lewisham","player_id":9,"total_matches_played":95,"tournament_date":"2023-04-09","player_experience":93,"matches_played":4}
+{"team_name":"Lewisham","player_id":9,"total_matches_played":95,"tournament_date":"2023-04-23","player_experience":94,"matches_played":1}
+{"team_name":"Lewisham","player_id":9,"total_matches_played":95,"tournament_date":"2023-05-21","player_experience":95,"matches_played":1}
+{"team_name":"Lewisham","player_id":10,"total_matches_played":30,"tournament_date":"2023-01-29","player_experience":17,"matches_played":4}
+{"team_name":"Lewisham","player_id":10,"total_matches_played":30,"tournament_date":"2023-02-12","player_experience":22,"matches_played":5}
+{"team_name":"Lewisham","player_id":10,"total_matches_played":30,"tournament_date":"2023-02-26","player_experience":27,"matches_played":5}
+{"team_name":"Lewisham","player_id":10,"total_matches_played":30,"tournament_date":"2023-04-09","player_experience":30,"matches_played":3}
+{"team_name":"Lewisham","player_id":11,"total_matches_played":51,"tournament_date":"2023-01-15","player_experience":37,"matches_played":4}
+{"team_name":"Lewisham","player_id":11,"total_matches_played":51,"tournament_date":"2023-01-29","player_experience":38,"matches_played":1}
+{"team_name":"Lewisham","player_id":11,"total_matches_played":51,"tournament_date":"2023-03-12","player_experience":39,"matches_played":1}
+{"team_name":"Lewisham","player_id":11,"total_matches_played":51,"tournament_date":"2023-04-09","player_experience":43,"matches_played":4}
+{"team_name":"Lewisham","player_id":11,"total_matches_played":51,"tournament_date":"2023-05-07","player_experience":48,"matches_played":5}
+{"team_name":"Lewisham","player_id":11,"total_matches_played":51,"tournament_date":"2023-05-21","player_experience":51,"matches_played":3}
+{"team_name":"Notting Hill","player_id":1,"total_matches_played":34,"tournament_date":"2023-01-15","player_experience":29,"matches_played":3}
+{"team_name":"Notting Hill","player_id":1,"total_matches_played":34,"tournament_date":"2023-01-29","player_experience":30,"matches_played":1}
+{"team_name":"Notting Hill","player_id":1,"total_matches_played":34,"tournament_date":"2023-02-26","player_experience":31,"matches_played":1}
+{"team_name":"Notting Hill","player_id":1,"total_matches_played":34,"tournament_date":"2023-03-12","player_experience":32,"matches_played":1}
+{"team_name":"Notting Hill","player_id":1,"total_matches_played":34,"tournament_date":"2023-04-23","player_experience":34,"matches_played":2}
+{"team_name":"Notting Hill","player_id":2,"total_matches_played":43,"tournament_date":"2023-01-15","player_experience":23,"matches_played":2}
+{"team_name":"Notting Hill","player_id":2,"total_matches_played":43,"tournament_date":"2023-01-29","player_experience":27,"matches_played":4}
+{"team_name":"Notting Hill","player_id":2,"total_matches_played":43,"tournament_date":"2023-02-12","player_experience":30,"matches_played":3}
+{"team_name":"Notting Hill","player_id":2,"total_matches_played":43,"tournament_date":"2023-02-26","player_experience":35,"matches_played":5}
+{"team_name":"Notting Hill","player_id":2,"total_matches_played":43,"tournament_date":"2023-03-26","player_experience":36,"matches_played":1}
+{"team_name":"Notting Hill","player_id":2,"total_matches_played":43,"tournament_date":"2023-04-23","player_experience":41,"matches_played":5}
+{"team_name":"Notting Hill","player_id":2,"total_matches_played":43,"tournament_date":"2023-05-07","player_experience":42,"matches_played":1}
+{"team_name":"Notting Hill","player_id":2,"total_matches_played":43,"tournament_date":"2023-05-21","player_experience":43,"matches_played":1}
+{"team_name":"Notting Hill","player_id":3,"total_matches_played":120,"tournament_date":"2023-01-15","player_experience":114,"matches_played":2}
+{"team_name":"Notting Hill","player_id":3,"total_matches_played":120,"tournament_date":"2023-01-29","player_experience":117,"matches_played":3}
+{"team_name":"Notting Hill","player_id":3,"total_matches_played":120,"tournament_date":"2023-04-09","player_experience":120,"matches_played":3}
+{"team_name":"Notting Hill","player_id":4,"total_matches_played":105,"tournament_date":"2023-01-15","player_experience":89,"matches_played":1}
+{"team_name":"Notting Hill","player_id":4,"total_matches_played":105,"tournament_date":"2023-02-26","player_experience":93,"matches_played":4}
+{"team_name":"Notting Hill","player_id":4,"total_matches_played":105,"tournament_date":"2023-03-12","player_experience":95,"matches_played":2}
+{"team_name":"Notting Hill","player_id":4,"total_matches_played":105,"tournament_date":"2023-03-26","player_experience":96,"matches_played":1}
+{"team_name":"Notting Hill","player_id":4,"total_matches_played":105,"tournament_date":"2023-04-09","player_experience":100,"matches_played":4}
+{"team_name":"Notting Hill","player_id":4,"total_matches_played":105,"tournament_date":"2023-05-21","player_experience":105,"matches_played":5}
+{"team_name":"Notting Hill","player_id":5,"total_matches_played":130,"tournament_date":"2023-01-15","player_experience":106,"matches_played":4}
+{"team_name":"Notting Hill","player_id":5,"total_matches_played":130,"tournament_date":"2023-01-29","player_experience":110,"matches_played":4}
+{"team_name":"Notting Hill","player_id":5,"total_matches_played":130,"tournament_date":"2023-03-12","player_experience":112,"matches_played":2}
+{"team_name":"Notting Hill","player_id":5,"total_matches_played":130,"tournament_date":"2023-03-26","player_experience":116,"matches_played":4}
+{"team_name":"Notting Hill","player_id":5,"total_matches_played":130,"tournament_date":"2023-04-09","player_experience":121,"matches_played":5}
+{"team_name":"Notting Hill","player_id":5,"total_matches_played":130,"tournament_date":"2023-04-23","player_experience":123,"matches_played":2}
+{"team_name":"Notting Hill","player_id":5,"total_matches_played":130,"tournament_date":"2023-05-07","player_experience":125,"matches_played":2}
+{"team_name":"Notting Hill","player_id":5,"total_matches_played":130,"tournament_date":"2023-05-21","player_experience":130,"matches_played":5}
+{"team_name":"Notting Hill","player_id":6,"total_matches_played":142,"tournament_date":"2023-01-29","player_experience":131,"matches_played":3}
+{"team_name":"Notting Hill","player_id":6,"total_matches_played":142,"tournament_date":"2023-02-12","player_experience":133,"matches_played":2}
+{"team_name":"Notting Hill","player_id":6,"total_matches_played":142,"tournament_date":"2023-03-12","player_experience":134,"matches_played":1}
+{"team_name":"Notting Hill","player_id":6,"total_matches_played":142,"tournament_date":"2023-04-23","player_experience":135,"matches_played":1}
+{"team_name":"Notting Hill","player_id":6,"total_matches_played":142,"tournament_date":"2023-05-07","player_experience":139,"matches_played":4}
+{"team_name":"Notting Hill","player_id":6,"total_matches_played":142,"tournament_date":"2023-05-21","player_experience":142,"matches_played":3}
+{"team_name":"Notting Hill","player_id":7,"total_matches_played":114,"tournament_date":"2023-01-29","player_experience":108,"matches_played":1}
+{"team_name":"Notting Hill","player_id":7,"total_matches_played":114,"tournament_date":"2023-02-12","player_experience":110,"matches_played":2}
+{"team_name":"Notting Hill","player_id":7,"total_matches_played":114,"tournament_date":"2023-03-26","player_experience":114,"matches_played":4}
+{"team_name":"Notting Hill","player_id":8,"total_matches_played":149,"tournament_date":"2023-01-15","player_experience":130,"matches_played":3}
+{"team_name":"Notting Hill","player_id":8,"total_matches_played":149,"tournament_date":"2023-02-12","player_experience":135,"matches_played":5}
+{"team_name":"Notting Hill","player_id":8,"total_matches_played":149,"tournament_date":"2023-02-26","player_experience":139,"matches_played":4}
+{"team_name":"Notting Hill","player_id":8,"total_matches_played":149,"tournament_date":"2023-03-26","player_experience":144,"matches_played":5}
+{"team_name":"Notting Hill","player_id":8,"total_matches_played":149,"tournament_date":"2023-04-23","player_experience":145,"matches_played":1}
+{"team_name":"Notting Hill","player_id":8,"total_matches_played":149,"tournament_date":"2023-05-21","player_experience":149,"matches_played":4}
+{"team_name":"Notting Hill","player_id":9,"total_matches_played":39,"tournament_date":"2023-02-12","player_experience":33,"matches_played":1}
+{"team_name":"Notting Hill","player_id":9,"total_matches_played":39,"tournament_date":"2023-02-26","player_experience":35,"matches_played":2}
+{"team_name":"Notting Hill","player_id":9,"total_matches_played":39,"tournament_date":"2023-03-26","player_experience":36,"matches_played":1}
+{"team_name":"Notting Hill","player_id":9,"total_matches_played":39,"tournament_date":"2023-04-09","player_experience":37,"matches_played":1}
+{"team_name":"Notting Hill","player_id":9,"total_matches_played":39,"tournament_date":"2023-05-07","player_experience":39,"matches_played":2}
+{"team_name":"Notting Hill","player_id":10,"total_matches_played":42,"tournament_date":"2023-01-29","player_experience":29,"matches_played":5}
+{"team_name":"Notting Hill","player_id":10,"total_matches_played":42,"tournament_date":"2023-03-12","player_experience":32,"matches_played":3}
+{"team_name":"Notting Hill","player_id":10,"total_matches_played":42,"tournament_date":"2023-03-26","player_experience":35,"matches_played":3}
+{"team_name":"Notting Hill","player_id":10,"total_matches_played":42,"tournament_date":"2023-04-23","player_experience":40,"matches_played":5}
+{"team_name":"Notting Hill","player_id":10,"total_matches_played":42,"tournament_date":"2023-05-07","player_experience":42,"matches_played":2}
+{"team_name":"Notting Hill","player_id":11,"total_matches_played":91,"tournament_date":"2023-01-29","player_experience":73,"matches_played":5}
+{"team_name":"Notting Hill","player_id":11,"total_matches_played":91,"tournament_date":"2023-02-12","player_experience":74,"matches_played":1}
+{"team_name":"Notting Hill","player_id":11,"total_matches_played":91,"tournament_date":"2023-02-26","player_experience":79,"matches_played":5}
+{"team_name":"Notting Hill","player_id":11,"total_matches_played":91,"tournament_date":"2023-03-12","player_experience":82,"matches_played":3}
+{"team_name":"Notting Hill","player_id":11,"total_matches_played":91,"tournament_date":"2023-03-26","player_experience":86,"matches_played":4}
+{"team_name":"Notting Hill","player_id":11,"total_matches_played":91,"tournament_date":"2023-04-09","player_experience":87,"matches_played":1}
+{"team_name":"Notting Hill","player_id":11,"total_matches_played":91,"tournament_date":"2023-04-23","player_experience":90,"matches_played":3}
+{"team_name":"Notting Hill","player_id":11,"total_matches_played":91,"tournament_date":"2023-05-07","player_experience":91,"matches_played":1}
+{"team_name":"Shoreditch","player_id":1,"total_matches_played":69,"tournament_date":"2023-01-15","player_experience":45,"matches_played":1}
+{"team_name":"Shoreditch","player_id":1,"total_matches_played":69,"tournament_date":"2023-01-29","player_experience":50,"matches_played":5}
+{"team_name":"Shoreditch","player_id":1,"total_matches_played":69,"tournament_date":"2023-02-12","player_experience":53,"matches_played":3}
+{"team_name":"Shoreditch","player_id":1,"total_matches_played":69,"tournament_date":"2023-02-26","player_experience":57,"matches_played":4}
+{"team_name":"Shoreditch","player_id":1,"total_matches_played":69,"tournament_date":"2023-03-26","player_experience":60,"matches_played":3}
+{"team_name":"Shoreditch","player_id":1,"total_matches_played":69,"tournament_date":"2023-04-09","player_experience":62,"matches_played":2}
+{"team_name":"Shoreditch","player_id":1,"total_matches_played":69,"tournament_date":"2023-04-23","player_experience":64,"matches_played":2}
+{"team_name":"Shoreditch","player_id":1,"total_matches_played":69,"tournament_date":"2023-05-07","player_experience":69,"matches_played":5}
+{"team_name":"Shoreditch","player_id":2,"total_matches_played":147,"tournament_date":"2023-01-29","player_experience":127,"matches_played":2}
+{"team_name":"Shoreditch","player_id":2,"total_matches_played":147,"tournament_date":"2023-02-12","player_experience":129,"matches_played":2}
+{"team_name":"Shoreditch","player_id":2,"total_matches_played":147,"tournament_date":"2023-02-26","player_experience":134,"matches_played":5}
+{"team_name":"Shoreditch","player_id":2,"total_matches_played":147,"tournament_date":"2023-03-26","player_experience":136,"matches_played":2}
+{"team_name":"Shoreditch","player_id":2,"total_matches_played":147,"tournament_date":"2023-04-09","player_experience":140,"matches_played":4}
+{"team_name":"Shoreditch","player_id":2,"total_matches_played":147,"tournament_date":"2023-04-23","player_experience":145,"matches_played":5}
+{"team_name":"Shoreditch","player_id":2,"total_matches_played":147,"tournament_date":"2023-05-07","player_experience":146,"matches_played":1}
+{"team_name":"Shoreditch","player_id":2,"total_matches_played":147,"tournament_date":"2023-05-21","player_experience":147,"matches_played":1}
+{"team_name":"Shoreditch","player_id":3,"total_matches_played":132,"tournament_date":"2023-01-15","player_experience":116,"matches_played":5}
+{"team_name":"Shoreditch","player_id":3,"total_matches_played":132,"tournament_date":"2023-03-12","player_experience":121,"matches_played":5}
+{"team_name":"Shoreditch","player_id":3,"total_matches_played":132,"tournament_date":"2023-03-26","player_experience":124,"matches_played":3}
+{"team_name":"Shoreditch","player_id":3,"total_matches_played":132,"tournament_date":"2023-04-09","player_experience":129,"matches_played":5}
+{"team_name":"Shoreditch","player_id":3,"total_matches_played":132,"tournament_date":"2023-05-07","player_experience":132,"matches_played":3}
+{"team_name":"Shoreditch","player_id":4,"total_matches_played":125,"tournament_date":"2023-01-15","player_experience":105,"matches_played":5}
+{"team_name":"Shoreditch","player_id":4,"total_matches_played":125,"tournament_date":"2023-01-29","player_experience":109,"matches_played":4}
+{"team_name":"Shoreditch","player_id":4,"total_matches_played":125,"tournament_date":"2023-02-12","player_experience":111,"matches_played":2}
+{"team_name":"Shoreditch","player_id":4,"total_matches_played":125,"tournament_date":"2023-02-26","player_experience":115,"matches_played":4}
+{"team_name":"Shoreditch","player_id":4,"total_matches_played":125,"tournament_date":"2023-03-12","player_experience":116,"matches_played":1}
+{"team_name":"Shoreditch","player_id":4,"total_matches_played":125,"tournament_date":"2023-04-09","player_experience":117,"matches_played":1}
+{"team_name":"Shoreditch","player_id":4,"total_matches_played":125,"tournament_date":"2023-04-23","player_experience":121,"matches_played":4}
+{"team_name":"Shoreditch","player_id":4,"total_matches_played":125,"tournament_date":"2023-05-21","player_experience":125,"matches_played":4}
+{"team_name":"Shoreditch","player_id":5,"total_matches_played":15,"tournament_date":"2023-01-15","player_experience":6,"matches_played":3}
+{"team_name":"Shoreditch","player_id":5,"total_matches_played":15,"tournament_date":"2023-02-12","player_experience":7,"matches_played":1}
+{"team_name":"Shoreditch","player_id":5,"total_matches_played":15,"tournament_date":"2023-03-12","player_experience":8,"matches_played":1}
+{"team_name":"Shoreditch","player_id":5,"total_matches_played":15,"tournament_date":"2023-03-26","player_experience":10,"matches_played":2}
+{"team_name":"Shoreditch","player_id":5,"total_matches_played":15,"tournament_date":"2023-04-09","player_experience":13,"matches_played":3}
+{"team_name":"Shoreditch","player_id":5,"total_matches_played":15,"tournament_date":"2023-04-23","player_experience":15,"matches_played":2}
+{"team_name":"Shoreditch","player_id":6,"total_matches_played":147,"tournament_date":"2023-01-15","player_experience":120,"matches_played":4}
+{"team_name":"Shoreditch","player_id":6,"total_matches_played":147,"tournament_date":"2023-01-29","player_experience":121,"matches_played":1}
+{"team_name":"Shoreditch","player_id":6,"total_matches_played":147,"tournament_date":"2023-02-12","player_experience":125,"matches_played":4}
+{"team_name":"Shoreditch","player_id":6,"total_matches_played":147,"tournament_date":"2023-02-26","player_experience":129,"matches_played":4}
+{"team_name":"Shoreditch","player_id":6,"total_matches_played":147,"tournament_date":"2023-03-12","player_experience":133,"matches_played":4}
+{"team_name":"Shoreditch","player_id":6,"total_matches_played":147,"tournament_date":"2023-03-26","player_experience":135,"matches_played":2}
+{"team_name":"Shoreditch","player_id":6,"total_matches_played":147,"tournament_date":"2023-04-09","player_experience":139,"matches_played":4}
+{"team_name":"Shoreditch","player_id":6,"total_matches_played":147,"tournament_date":"2023-04-23","player_experience":143,"matches_played":4}
+{"team_name":"Shoreditch","player_id":6,"total_matches_played":147,"tournament_date":"2023-05-07","player_experience":145,"matches_played":2}
+{"team_name":"Shoreditch","player_id":6,"total_matches_played":147,"tournament_date":"2023-05-21","player_experience":147,"matches_played":2}
+{"team_name":"Shoreditch","player_id":7,"total_matches_played":155,"tournament_date":"2023-01-15","player_experience":131,"matches_played":4}
+{"team_name":"Shoreditch","player_id":7,"total_matches_played":155,"tournament_date":"2023-01-29","player_experience":135,"matches_played":4}
+{"team_name":"Shoreditch","player_id":7,"total_matches_played":155,"tournament_date":"2023-02-12","player_experience":137,"matches_played":2}
+{"team_name":"Shoreditch","player_id":7,"total_matches_played":155,"tournament_date":"2023-02-26","player_experience":142,"matches_played":5}
+{"team_name":"Shoreditch","player_id":7,"total_matches_played":155,"tournament_date":"2023-03-26","player_experience":145,"matches_played":3}
+{"team_name":"Shoreditch","player_id":7,"total_matches_played":155,"tournament_date":"2023-04-09","player_experience":146,"matches_played":1}
+{"team_name":"Shoreditch","player_id":7,"total_matches_played":155,"tournament_date":"2023-04-23","player_experience":149,"matches_played":3}
+{"team_name":"Shoreditch","player_id":7,"total_matches_played":155,"tournament_date":"2023-05-07","player_experience":151,"matches_played":2}
+{"team_name":"Shoreditch","player_id":7,"total_matches_played":155,"tournament_date":"2023-05-21","player_experience":155,"matches_played":4}
+{"team_name":"Shoreditch","player_id":8,"total_matches_played":83,"tournament_date":"2023-01-15","player_experience":63,"matches_played":1}
+{"team_name":"Shoreditch","player_id":8,"total_matches_played":83,"tournament_date":"2023-01-29","player_experience":67,"matches_played":4}
+{"team_name":"Shoreditch","player_id":8,"total_matches_played":83,"tournament_date":"2023-02-12","player_experience":72,"matches_played":5}
+{"team_name":"Shoreditch","player_id":8,"total_matches_played":83,"tournament_date":"2023-03-12","player_experience":77,"matches_played":5}
+{"team_name":"Shoreditch","player_id":8,"total_matches_played":83,"tournament_date":"2023-05-07","player_experience":80,"matches_played":3}
+{"team_name":"Shoreditch","player_id":8,"total_matches_played":83,"tournament_date":"2023-05-21","player_experience":83,"matches_played":3}
+{"team_name":"Shoreditch","player_id":9,"total_matches_played":65,"tournament_date":"2023-03-12","player_experience":56,"matches_played":2}
+{"team_name":"Shoreditch","player_id":9,"total_matches_played":65,"tournament_date":"2023-05-07","player_experience":61,"matches_played":5}
+{"team_name":"Shoreditch","player_id":9,"total_matches_played":65,"tournament_date":"2023-05-21","player_experience":65,"matches_played":4}
+{"team_name":"Shoreditch","player_id":10,"total_matches_played":43,"tournament_date":"2023-01-29","player_experience":28,"matches_played":1}
+{"team_name":"Shoreditch","player_id":10,"total_matches_played":43,"tournament_date":"2023-02-12","player_experience":30,"matches_played":2}
+{"team_name":"Shoreditch","player_id":10,"total_matches_played":43,"tournament_date":"2023-02-26","player_experience":31,"matches_played":1}
+{"team_name":"Shoreditch","player_id":10,"total_matches_played":43,"tournament_date":"2023-03-26","player_experience":35,"matches_played":4}
+{"team_name":"Shoreditch","player_id":10,"total_matches_played":43,"tournament_date":"2023-04-09","player_experience":38,"matches_played":3}
+{"team_name":"Shoreditch","player_id":10,"total_matches_played":43,"tournament_date":"2023-04-23","player_experience":42,"matches_played":4}
+{"team_name":"Shoreditch","player_id":10,"total_matches_played":43,"tournament_date":"2023-05-21","player_experience":43,"matches_played":1}
+{"team_name":"Shoreditch","player_id":11,"total_matches_played":82,"tournament_date":"2023-01-15","player_experience":61,"matches_played":3}
+{"team_name":"Shoreditch","player_id":11,"total_matches_played":82,"tournament_date":"2023-01-29","player_experience":64,"matches_played":3}
+{"team_name":"Shoreditch","player_id":11,"total_matches_played":82,"tournament_date":"2023-02-12","player_experience":68,"matches_played":4}
+{"team_name":"Shoreditch","player_id":11,"total_matches_played":82,"tournament_date":"2023-02-26","player_experience":70,"matches_played":2}
+{"team_name":"Shoreditch","player_id":11,"total_matches_played":82,"tournament_date":"2023-03-26","player_experience":75,"matches_played":5}
+{"team_name":"Shoreditch","player_id":11,"total_matches_played":82,"tournament_date":"2023-04-09","player_experience":78,"matches_played":3}
+{"team_name":"Shoreditch","player_id":11,"total_matches_played":82,"tournament_date":"2023-04-23","player_experience":79,"matches_played":1}
+{"team_name":"Shoreditch","player_id":11,"total_matches_played":82,"tournament_date":"2023-05-21","player_experience":82,"matches_played":3}
+{"team_name":"Wimbledon","player_id":1,"total_matches_played":76,"tournament_date":"2023-01-15","player_experience":52,"matches_played":5}
+{"team_name":"Wimbledon","player_id":1,"total_matches_played":76,"tournament_date":"2023-01-29","player_experience":56,"matches_played":4}
+{"team_name":"Wimbledon","player_id":1,"total_matches_played":76,"tournament_date":"2023-02-12","player_experience":61,"matches_played":5}
+{"team_name":"Wimbledon","player_id":1,"total_matches_played":76,"tournament_date":"2023-02-26","player_experience":66,"matches_played":5}
+{"team_name":"Wimbledon","player_id":1,"total_matches_played":76,"tournament_date":"2023-03-12","player_experience":69,"matches_played":3}
+{"team_name":"Wimbledon","player_id":1,"total_matches_played":76,"tournament_date":"2023-03-26","player_experience":71,"matches_played":2}
+{"team_name":"Wimbledon","player_id":1,"total_matches_played":76,"tournament_date":"2023-04-23","player_experience":73,"matches_played":2}
+{"team_name":"Wimbledon","player_id":1,"total_matches_played":76,"tournament_date":"2023-05-07","player_experience":75,"matches_played":2}
+{"team_name":"Wimbledon","player_id":1,"total_matches_played":76,"tournament_date":"2023-05-21","player_experience":76,"matches_played":1}
+{"team_name":"Wimbledon","player_id":2,"total_matches_played":111,"tournament_date":"2023-01-15","player_experience":92,"matches_played":3}
+{"team_name":"Wimbledon","player_id":2,"total_matches_played":111,"tournament_date":"2023-01-29","player_experience":95,"matches_played":3}
+{"team_name":"Wimbledon","player_id":2,"total_matches_played":111,"tournament_date":"2023-02-26","player_experience":100,"matches_played":5}
+{"team_name":"Wimbledon","player_id":2,"total_matches_played":111,"tournament_date":"2023-03-12","player_experience":101,"matches_played":1}
+{"team_name":"Wimbledon","player_id":2,"total_matches_played":111,"tournament_date":"2023-03-26","player_experience":105,"matches_played":4}
+{"team_name":"Wimbledon","player_id":2,"total_matches_played":111,"tournament_date":"2023-04-09","player_experience":106,"matches_played":1}
+{"team_name":"Wimbledon","player_id":2,"total_matches_played":111,"tournament_date":"2023-04-23","player_experience":110,"matches_played":4}
+{"team_name":"Wimbledon","player_id":2,"total_matches_played":111,"tournament_date":"2023-05-07","player_experience":111,"matches_played":1}
+{"team_name":"Wimbledon","player_id":3,"total_matches_played":68,"tournament_date":"2023-01-29","player_experience":51,"matches_played":4}
+{"team_name":"Wimbledon","player_id":3,"total_matches_played":68,"tournament_date":"2023-03-12","player_experience":56,"matches_played":5}
+{"team_name":"Wimbledon","player_id":3,"total_matches_played":68,"tournament_date":"2023-03-26","player_experience":59,"matches_played":3}
+{"team_name":"Wimbledon","player_id":3,"total_matches_played":68,"tournament_date":"2023-04-09","player_experience":62,"matches_played":3}
+{"team_name":"Wimbledon","player_id":3,"total_matches_played":68,"tournament_date":"2023-04-23","player_experience":64,"matches_played":2}
+{"team_name":"Wimbledon","player_id":3,"total_matches_played":68,"tournament_date":"2023-05-07","player_experience":68,"matches_played":4}
+{"team_name":"Wimbledon","player_id":4,"total_matches_played":122,"tournament_date":"2023-01-29","player_experience":101,"matches_played":3}
+{"team_name":"Wimbledon","player_id":4,"total_matches_played":122,"tournament_date":"2023-02-12","player_experience":102,"matches_played":1}
+{"team_name":"Wimbledon","player_id":4,"total_matches_played":122,"tournament_date":"2023-02-26","player_experience":107,"matches_played":5}
+{"team_name":"Wimbledon","player_id":4,"total_matches_played":122,"tournament_date":"2023-03-12","player_experience":112,"matches_played":5}
+{"team_name":"Wimbledon","player_id":4,"total_matches_played":122,"tournament_date":"2023-03-26","player_experience":114,"matches_played":2}
+{"team_name":"Wimbledon","player_id":4,"total_matches_played":122,"tournament_date":"2023-04-23","player_experience":117,"matches_played":3}
+{"team_name":"Wimbledon","player_id":4,"total_matches_played":122,"tournament_date":"2023-05-07","player_experience":122,"matches_played":5}
+{"team_name":"Wimbledon","player_id":5,"total_matches_played":132,"tournament_date":"2023-01-15","player_experience":103,"matches_played":3}
+{"team_name":"Wimbledon","player_id":5,"total_matches_played":132,"tournament_date":"2023-01-29","player_experience":106,"matches_played":3}
+{"team_name":"Wimbledon","player_id":5,"total_matches_played":132,"tournament_date":"2023-02-12","player_experience":109,"matches_played":3}
+{"team_name":"Wimbledon","player_id":5,"total_matches_played":132,"tournament_date":"2023-02-26","player_experience":113,"matches_played":4}
+{"team_name":"Wimbledon","player_id":5,"total_matches_played":132,"tournament_date":"2023-03-12","player_experience":117,"matches_played":4}
+{"team_name":"Wimbledon","player_id":5,"total_matches_played":132,"tournament_date":"2023-04-09","player_experience":121,"matches_played":4}
+{"team_name":"Wimbledon","player_id":5,"total_matches_played":132,"tournament_date":"2023-04-23","player_experience":123,"matches_played":2}
+{"team_name":"Wimbledon","player_id":5,"total_matches_played":132,"tournament_date":"2023-05-07","player_experience":127,"matches_played":4}
+{"team_name":"Wimbledon","player_id":5,"total_matches_played":132,"tournament_date":"2023-05-21","player_experience":132,"matches_played":5}
+{"team_name":"Wimbledon","player_id":6,"total_matches_played":21,"tournament_date":"2023-01-15","player_experience":4,"matches_played":4}
+{"team_name":"Wimbledon","player_id":6,"total_matches_played":21,"tournament_date":"2023-02-12","player_experience":7,"matches_played":3}
+{"team_name":"Wimbledon","player_id":6,"total_matches_played":21,"tournament_date":"2023-02-26","player_experience":8,"matches_played":1}
+{"team_name":"Wimbledon","player_id":6,"total_matches_played":21,"tournament_date":"2023-03-12","player_experience":10,"matches_played":2}
+{"team_name":"Wimbledon","player_id":6,"total_matches_played":21,"tournament_date":"2023-03-26","player_experience":15,"matches_played":5}
+{"team_name":"Wimbledon","player_id":6,"total_matches_played":21,"tournament_date":"2023-04-23","player_experience":18,"matches_played":3}
+{"team_name":"Wimbledon","player_id":6,"total_matches_played":21,"tournament_date":"2023-05-07","player_experience":21,"matches_played":3}
+{"team_name":"Wimbledon","player_id":7,"total_matches_played":37,"tournament_date":"2023-01-29","player_experience":22,"matches_played":4}
+{"team_name":"Wimbledon","player_id":7,"total_matches_played":37,"tournament_date":"2023-02-26","player_experience":23,"matches_played":1}
+{"team_name":"Wimbledon","player_id":7,"total_matches_played":37,"tournament_date":"2023-03-12","player_experience":24,"matches_played":1}
+{"team_name":"Wimbledon","player_id":7,"total_matches_played":37,"tournament_date":"2023-04-09","player_experience":26,"matches_played":2}
+{"team_name":"Wimbledon","player_id":7,"total_matches_played":37,"tournament_date":"2023-04-23","player_experience":31,"matches_played":5}
+{"team_name":"Wimbledon","player_id":7,"total_matches_played":37,"tournament_date":"2023-05-07","player_experience":36,"matches_played":5}
+{"team_name":"Wimbledon","player_id":7,"total_matches_played":37,"tournament_date":"2023-05-21","player_experience":37,"matches_played":1}
+{"team_name":"Wimbledon","player_id":8,"total_matches_played":34,"tournament_date":"2023-01-29","player_experience":22,"matches_played":5}
+{"team_name":"Wimbledon","player_id":8,"total_matches_played":34,"tournament_date":"2023-02-12","player_experience":24,"matches_played":2}
+{"team_name":"Wimbledon","player_id":8,"total_matches_played":34,"tournament_date":"2023-02-26","player_experience":26,"matches_played":2}
+{"team_name":"Wimbledon","player_id":8,"total_matches_played":34,"tournament_date":"2023-03-12","player_experience":28,"matches_played":2}
+{"team_name":"Wimbledon","player_id":8,"total_matches_played":34,"tournament_date":"2023-04-09","player_experience":30,"matches_played":2}
+{"team_name":"Wimbledon","player_id":8,"total_matches_played":34,"tournament_date":"2023-05-07","player_experience":32,"matches_played":2}
+{"team_name":"Wimbledon","player_id":8,"total_matches_played":34,"tournament_date":"2023-05-21","player_experience":34,"matches_played":2}
+{"team_name":"Wimbledon","player_id":9,"total_matches_played":71,"tournament_date":"2023-01-15","player_experience":60,"matches_played":5}
+{"team_name":"Wimbledon","player_id":9,"total_matches_played":71,"tournament_date":"2023-01-29","player_experience":62,"matches_played":2}
+{"team_name":"Wimbledon","player_id":9,"total_matches_played":71,"tournament_date":"2023-02-26","player_experience":64,"matches_played":2}
+{"team_name":"Wimbledon","player_id":9,"total_matches_played":71,"tournament_date":"2023-04-09","player_experience":66,"matches_played":2}
+{"team_name":"Wimbledon","player_id":9,"total_matches_played":71,"tournament_date":"2023-04-23","player_experience":68,"matches_played":2}
+{"team_name":"Wimbledon","player_id":9,"total_matches_played":71,"tournament_date":"2023-05-07","player_experience":71,"matches_played":3}
+{"team_name":"Wimbledon","player_id":10,"total_matches_played":60,"tournament_date":"2023-02-26","player_experience":48,"matches_played":2}
+{"team_name":"Wimbledon","player_id":10,"total_matches_played":60,"tournament_date":"2023-03-26","player_experience":53,"matches_played":5}
+{"team_name":"Wimbledon","player_id":10,"total_matches_played":60,"tournament_date":"2023-05-07","player_experience":55,"matches_played":2}
+{"team_name":"Wimbledon","player_id":10,"total_matches_played":60,"tournament_date":"2023-05-21","player_experience":60,"matches_played":5}
+{"team_name":"Wimbledon","player_id":11,"total_matches_played":28,"tournament_date":"2023-01-15","player_experience":14,"matches_played":2}
+{"team_name":"Wimbledon","player_id":11,"total_matches_played":28,"tournament_date":"2023-01-29","player_experience":19,"matches_played":5}
+{"team_name":"Wimbledon","player_id":11,"total_matches_played":28,"tournament_date":"2023-03-12","player_experience":21,"matches_played":2}
+{"team_name":"Wimbledon","player_id":11,"total_matches_played":28,"tournament_date":"2023-04-23","player_experience":23,"matches_played":2}
+{"team_name":"Wimbledon","player_id":11,"total_matches_played":28,"tournament_date":"2023-05-07","player_experience":24,"matches_played":1}
+{"team_name":"Wimbledon","player_id":11,"total_matches_played":28,"tournament_date":"2023-05-21","player_experience":28,"matches_played":4}

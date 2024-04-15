@@ -1,0 +1,18 @@
+{"customer":"Barnes & Noble","book":"Data Curious","quantity":137,"order_date":"2023-07-01","running_diff":null}
+{"customer":"Barnes & Noble","book":"Data Curious","quantity":32,"order_date":"2023-08-01","running_diff":-105}
+{"customer":"Barnes & Noble","book":"Tableau Prep Up & Running","quantity":137,"order_date":"2023-07-01","running_diff":null}
+{"customer":"Barnes & Noble","book":"Tableau Prep Up & Running","quantity":35,"order_date":"2023-08-01","running_diff":-102}
+{"customer":"Borders","book":"Communicating with Data","quantity":52,"order_date":"2023-07-01","running_diff":null}
+{"customer":"Borders","book":"Communicating with Data","quantity":72,"order_date":"2023-08-01","running_diff":20}
+{"customer":"Borders","book":"Communicating with Data","quantity":95,"order_date":"2023-08-01","running_diff":23}
+{"customer":"Boyles","book":"Data Curious","quantity":119,"order_date":"2023-07-01","running_diff":null}
+{"customer":"Boyles","book":"Data Curious","quantity":131,"order_date":"2023-08-01","running_diff":12}
+{"customer":"WHSmiths","book":"Communicating with Data","quantity":33,"order_date":"2023-07-01","running_diff":null}
+{"customer":"WHSmiths","book":"Communicating with Data","quantity":124,"order_date":"2023-08-01","running_diff":91}
+{"customer":"WHSmiths","book":"Data Curious","quantity":115,"order_date":"2023-07-01","running_diff":null}
+{"customer":"WHSmiths","book":"Data Curious","quantity":22,"order_date":"2023-08-01","running_diff":-93}
+{"customer":"WHSmiths","book":"Tableau Prep Up & Running","quantity":22,"order_date":"2023-07-01","running_diff":null}
+{"customer":"WHSmiths","book":"Tableau Prep Up & Running","quantity":110,"order_date":"2023-08-01","running_diff":88}
+{"customer":"Waterstones","book":"Data Curious","quantity":56,"order_date":"2023-07-01","running_diff":null}
+{"customer":"Waterstones","book":"Tableau Prep Up & Running","quantity":51,"order_date":"2023-07-01","running_diff":null}
+{"customer":"Waterstones","book":"Tableau Prep Up & Running","quantity":86,"order_date":"2023-08-01","running_diff":35}
