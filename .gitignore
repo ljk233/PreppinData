@@ -153,74 +153,7 @@ cython_debug/
 
 # Add custom paths
 .virtual_documents
-*/input
-_2023/02_intenational_bank_numbers.ipynb
-_2023/03_targets_for_dsb.ipynb
-_2023/04_new_customers.ipynb
-_2023/05_dsb_raking.ipynb
-_2023/06_dsb_customer_ratings.ipynb
-_2023/challenge08.py
-_2023/challenge01/01_clean_week1_data.ipynb
-_2023/challenge01/02_stage_transaction_bank.ipynb
-_2023/challenge01/03_stage_transaction_method.ipynb
-_2023/challenge01/04_generate_outputs.ipynb
-_2023/data/output/avg_bank_rankings.ndjson
-_2023/data/output/flagged_transction.ndjson
-_2023/data/output/new_customer.ndjson
-_2023/data/output/survey_result_summary.ndjson
-_2023/data/output/total_transaction_value_by_bank_customer.ndjson
-_2023/data/output/total_transaction_value_by_bank_detailed.ndjson
-_2023/data/output/total_transaction_value_by_bank.ndjson
-_2023/data/output/wk8_ranked_purchases.ndjson
-_2023/data/stage/account_holders.parquet
-_2023/data/stage/account_info.parquet
-_2023/data/stage/customer_survey.ndjson
-_2023/data/stage/stg_transaction_bank.parquet
-_2023/data/stage/stg_transaction_method.parquet
-_2023/data/stage/stg_transaction.parquet
-_2023/data/stage/transaction_detail.parquet
-_2023/data/stage/transaction_path.parquet
-_2023/src/__init__.py
-_2023/src/clean_data.py
-_2023/src/file_info.py
-_2023/src/load_data.py
-_2023/src/params.py
-_2023/src/schemas.py
-_2024/challenge01.py
-_2024/challenge2.ipynb
-_2024/challenge3.ipynb
-_2024/challenge4.ipynb
-_2024/challenge05.py
-_2024/challenge08.ipynb
-_2024/challenge08.py
-_2024/wk6.ipynb
-_2024/challenge04/__init__..py
-_2024/challenge04/1_plan.md
-_2024/challenge04/2_prep_seat_allocations.ipynb
-_2024/challenge04/3_prep_seat_plan.ipynb
-_2024/challenge04/4_find_unbooked_seats.ipynb
-_2024/challenge04/load_data.py
-_2024/data/input/.keep
-_2024/data/input/PD 2024 Wk 1 Input.csv
-_2024/data/input/PD 2024 Wk 3 Input.xlsx
-_2024/data/input/PD 2024 Wk 4 Input.xlsx
-_2024/data/input/PD 2024 Wk 6 Input.csv
-_2024/data/input/Prep Air 2024 Flights.csv
-_2024/data/input/Prep Air Customers.csv
-_2024/data/input/Prep Air Loyalty.xlsx
-_2024/data/input/Prep Air Ticket Sales.csv
-_2024/data/input/Prep Air Updated Customers.csv
-_2024/data/output/.keep
-_2024/data/output/aggregated_quarterly_price_data_by_class_flow_card.ndjson
-_2024/data/output/booking_summary_json
-_2024/data/output/difference_to_target.ndjson
-_2024/data/output/fixed_flight_details.ndjson
-_2024/data/output/flight_details.ndjson
-_2024/data/output/unbooked_seats.ndjson
-_2024/src/challenge2.py
-_2024/src/challenge3.py
-_2024/src/challenge4.py
-_2024/src/load_data.py
+__input/
 preppin_data/_connect.py
 preppin_data/_parameters.py
 preppin_data/_data_lake/build.py
