@@ -165,7 +165,6 @@ def aggregate_total_value_by_bank_method_weekday(
         LazyFrame representing the aggregated data, with total transaction value
         grouped by bank, transaction method, and weekday.
     """
-
     weekday_expr = pl.col("created_on").dt.strftime("%A")
 
     return pre_data.with_columns(weekday=weekday_expr).pipe(
