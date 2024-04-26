@@ -14,7 +14,7 @@ import polars as pl
 
 
 def solve(transactions_fsrc: str, swift_fsrc: str) -> pl.DataFrame:
-    """Solve challenge 1 of Preppin' Data 2023.
+    """Solve challenge 2 of Preppin' Data 2023.
 
     Parameters
     ----------
