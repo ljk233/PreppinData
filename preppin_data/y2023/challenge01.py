@@ -183,7 +183,7 @@ def aggregate_total_value(pre_data: pl.LazyFrame, *group_by: str) -> pl.LazyFram
     Parameters
     ----------
     pre_data : pl.LazyFrame
-        LazyFrame representing the source data.
+        LazyFrame representing the preprocessed source data.
     *group_by : str
         Columns to group the data by.
 
