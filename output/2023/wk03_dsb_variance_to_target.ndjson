@@ -1,0 +1,8 @@
+{"transaction_method":"Online","quarter":1,"total_value":74562,"target":72500,"variance_to_target":2062}
+{"transaction_method":"In-Person","quarter":1,"total_value":77576,"target":75000,"variance_to_target":2576}
+{"transaction_method":"Online","quarter":2,"total_value":69325,"target":70000,"variance_to_target":-675}
+{"transaction_method":"In-Person","quarter":2,"total_value":70634,"target":70000,"variance_to_target":634}
+{"transaction_method":"Online","quarter":3,"total_value":59072,"target":60000,"variance_to_target":-928}
+{"transaction_method":"In-Person","quarter":3,"total_value":74189,"target":70000,"variance_to_target":4189}
+{"transaction_method":"Online","quarter":4,"total_value":61908,"target":60000,"variance_to_target":1908}
+{"transaction_method":"In-Person","quarter":4,"total_value":43223,"target":60000,"variance_to_target":-16777}
