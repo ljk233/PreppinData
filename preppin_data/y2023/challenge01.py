@@ -37,20 +37,20 @@ def solve(pd_input_wk1_fsrc: str) -> tuple[pl.DataFrame]:
     then aggregates the total transaction values by different criteria.
     """
     # Load the data
-    data = load_data(pd_input_wk1_fsrc)
+    transaction = load_transactions_data(pd_input_wk1_fsrc)
 
     # Preprocess the data
-    pre_data = data.pipe(preprocess_data)
+    pre_transaction = transaction.pipe(preprocess_transactions_data)
 
     # Aggregate the data
     return (
-        pre_data.pipe(aggregate_total_value_by_bank).collect(),
-        pre_data.pipe(aggregate_total_value_by_bank_method_weekday).collect(),
-        pre_data.pipe(aggregate_total_value_by_bank_customer_code).collect(),
+        pre_transaction.pipe(aggregate_total_value_by_bank).collect(),
+        pre_transaction.pipe(aggregate_total_value_by_bank_method_weekday).collect(),
+        pre_transaction.pipe(aggregate_total_value_by_bank_customer_code).collect(),
     )
 
 
-def load_data(pd_input_wk1_fsrc: str) -> pl.LazyFrame:
+def load_transactions_data(pd_input_wk1_fsrc: str) -> pl.LazyFrame:
     """Load data from a CSV file.
 
     Parameters
@@ -68,7 +68,7 @@ def load_data(pd_input_wk1_fsrc: str) -> pl.LazyFrame:
     return data
 
 
-def preprocess_data(data: pl.DataFrame) -> pl.LazyFrame:
+def preprocess_transactions_data(data: pl.DataFrame) -> pl.LazyFrame:
     """Preprocess the source data.
 
     Parameters
@@ -85,10 +85,10 @@ def preprocess_data(data: pl.DataFrame) -> pl.LazyFrame:
     -----
     Primary key is {transaction_code}.
     """
-    return data.pipe(clean_data)
+    return data.pipe(clean_transactions_data)
 
 
-def clean_data(data: pl.DataFrame) -> pl.LazyFrame:
+def clean_transactions_data(data: pl.DataFrame) -> pl.LazyFrame:
     """Clean the source data.
 
     Parameters
@@ -105,15 +105,31 @@ def clean_data(data: pl.DataFrame) -> pl.LazyFrame:
         "Transaction Code": "transaction_code",
         "Value": "value",
         "Customer Code": "customer_code",
-        "Online or In-Person": "transaction_method",
         "Transaction Date": "created_on",
     }
+
     # Expressions
     bank_expr = pl.col("Transaction Code").str.extract(r"^(\w+)")
 
     created_on_expr = pl.col("Transaction Date").cast(pl.Date)
 
-    return data.with_columns(created_on_expr, bank=bank_expr).rename(col_mapper)
+    transaction_method_expr = (
+        pl.when(pl.col("Online or In-Person") == 1)
+        .then(pl.lit("Online"))
+        .when(pl.col("Online or In-Person") == 2)
+        .then(pl.lit("In-Person"))
+        .otherwise(pl.lit(None))
+    )
+
+    return (
+        data.with_columns(
+            created_on_expr,
+            transaction_method=transaction_method_expr,
+            bank=bank_expr,
+        )
+        .drop("Online or In-Person")
+        .rename(col_mapper)
+    )
 
 
 def aggregate_total_value_by_bank(pre_data: pl.LazyFrame) -> pl.LazyFrame:
