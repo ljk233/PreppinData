@@ -43,7 +43,7 @@ def solve(transactions_fsrc: str, swift_fsrc: str) -> pl.DataFrame:
 
 
 def load_data(fsrc: str) -> pl.LazyFrame:
-    """Load transaction data from a CSV file.
+    """Load data from a CSV file.
 
     Parameters
     ----------
