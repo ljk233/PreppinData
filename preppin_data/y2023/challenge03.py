@@ -55,7 +55,7 @@ def solve(pd_input_wk1_fsrc: str, targets_fsrc: str) -> pl.DataFrame:
 
 
 def load_target_data(fsrc: str) -> pl.LazyFrame:
-    """Load data from a CSV file.
+    """Load target data from a CSV file.
 
     Parameters
     ----------
@@ -64,8 +64,8 @@ def load_target_data(fsrc: str) -> pl.LazyFrame:
 
     Returns
     -------
-    pl.DataFrame
-        LazyFrame representing the loaded data.
+    pl.LazyFrame
+        LazyFrame representing the target data.
     """
     data = pl.scan_csv(fsrc)
 
