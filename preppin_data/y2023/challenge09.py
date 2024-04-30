@@ -122,6 +122,7 @@ def view_customer_statement(
             "account_number",
             "transaction_created_on",
             "transaction_value",
+            descending=[False, False, True],
         )
         .with_columns(running_balance=running_balance_expr)
         .filter(current_month_pred)
