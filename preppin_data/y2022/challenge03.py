@@ -11,7 +11,7 @@ Inputs
 
 Outputs
 =======
-- output/2022/wk03_pupil_performance.ndjson
+- output/2022/wk03_pupil_performance_summary.ndjson
 """
 
 import polars as pl
