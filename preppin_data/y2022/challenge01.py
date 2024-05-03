@@ -29,7 +29,7 @@ def solve(pd_2022_wk1_fsrc: str) -> pl.DataFrame:
     """
 
     # Preprocess the data
-    pre_data = preprocess_data(pd_2022_wk1_fsrc)
+    pre_data = preprocess_pupil_contact_data(pd_2022_wk1_fsrc)
 
     # Normalise the data
     pupil = pre_data.pipe(normalize_pupil)
@@ -39,18 +39,18 @@ def solve(pd_2022_wk1_fsrc: str) -> pl.DataFrame:
     return view_preferred_parental_contact_details(pupil, parent_contact).collect()
 
 
-def preprocess_data(pd_2022_wk1_fsrc: str) -> pl.LazyFrame:
-    """Preprocesses the input data.
+def preprocess_pupil_contact_data(pd_2022_wk1_fsrc: str) -> pl.LazyFrame:
+    """Preprocesses the pupil contact data.
 
     Parameters
     ----------
     pd_2022_wk1_fsrc : str
-        Filepath of the input CSV file.
+        Filepath of the pupil contact CSV file.
 
     Returns
     -------
     pl.LazyFrame
-        LazyFrame representing the preprocessed input data.
+        LazyFrame representing the preprocessed pupil contact data.
 
     Notes
     -----
@@ -59,7 +59,7 @@ def preprocess_data(pd_2022_wk1_fsrc: str) -> pl.LazyFrame:
 
     data = load_data(pd_2022_wk1_fsrc)
 
-    return data.pipe(reshape_data).pipe(clean_data)
+    return data.pipe(reshape_pupil_contact_data).pipe(clean_pupil_contact_data)
 
 
 def load_data(pd_2022_wk1_fsrc: str) -> pl.LazyFrame:
@@ -79,18 +79,18 @@ def load_data(pd_2022_wk1_fsrc: str) -> pl.LazyFrame:
     return pl.scan_csv(pd_2022_wk1_fsrc)
 
 
-def reshape_data(data: pl.LazyFrame) -> pl.LazyFrame:
-    """Reshape the input data.
+def reshape_pupil_contact_data(data: pl.LazyFrame) -> pl.LazyFrame:
+    """Reshape the pupil contact data.
 
     Parameters
     ----------
     data : pl.LazyFrame
-        LazyFrame representing the input data.
+        LazyFrame representing the pupil contact data.
 
     Returns
     -------
     pl.LazyFrame
-        LazyFrame representing the reshaped input data.
+        LazyFrame representing the reshaped pupil contact data.
     """
 
     return data.melt(
@@ -108,18 +108,18 @@ def reshape_data(data: pl.LazyFrame) -> pl.LazyFrame:
     )
 
 
-def clean_data(reshaped_data: pl.LazyFrame) -> pl.LazyFrame:
-    """Clean the reshaped data.
+def clean_pupil_contact_data(reshaped_data: pl.LazyFrame) -> pl.LazyFrame:
+    """Clean the reshaped pupil contact data.
 
     Parameters
     ----------
     reshaped_data : pl.LazyFrame
-        LazyFrame representing the reshaped input data.
+        LazyFrame representing the reshaped pupil contact data.
 
     Returns
     -------
     pl.LazyFrame
-        LazyFrame representing the cleaned input data.
+        LazyFrame representing the cleaned pupil contact data.
     """
 
     col_mapper = {
@@ -143,7 +143,7 @@ def normalize_pupil(pre_data: pl.LazyFrame) -> pl.LazyFrame:
     Parameters
     ----------
     pl.LazyFrame
-        LazyFrame representing the preprocessed input data.
+        LazyFrame representing the preprocessed pupil contact data.
 
     Returns
     -------
