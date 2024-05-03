@@ -1,0 +1,39 @@
+{"mode_of_transport":"Bicycle","weekday":"Tuesday","is_sustainable":true,"num_trips":220,"total_trips":1000,"pct_trips":22.0}
+{"mode_of_transport":"Van","weekday":"Tuesday","is_sustainable":false,"num_trips":46,"total_trips":1000,"pct_trips":4.6}
+{"mode_of_transport":"Car","weekday":"Thursday","is_sustainable":false,"num_trips":302,"total_trips":1000,"pct_trips":30.2}
+{"mode_of_transport":"Mum's Shoulders","weekday":"Friday","is_sustainable":true,"num_trips":24,"total_trips":1000,"pct_trips":2.4}
+{"mode_of_transport":"Bicycle","weekday":"Monday","is_sustainable":true,"num_trips":210,"total_trips":1000,"pct_trips":21.0}
+{"mode_of_transport":"Aeroplane","weekday":"Monday","is_sustainable":false,"num_trips":9,"total_trips":1000,"pct_trips":0.8999999999999999}
+{"mode_of_transport":"Scooter","weekday":"Thursday","is_sustainable":true,"num_trips":84,"total_trips":1000,"pct_trips":8.4}
+{"mode_of_transport":"Helicopter","weekday":"Monday","is_sustainable":false,"num_trips":72,"total_trips":1000,"pct_trips":7.199999999999999}
+{"mode_of_transport":"Mum's Shoulders","weekday":"Thursday","is_sustainable":true,"num_trips":9,"total_trips":1000,"pct_trips":0.8999999999999999}
+{"mode_of_transport":"Car","weekday":"Wednesday","is_sustainable":false,"num_trips":413,"total_trips":1000,"pct_trips":41.3}
+{"mode_of_transport":"Mum's Shoulders","weekday":"Tuesday","is_sustainable":true,"num_trips":15,"total_trips":1000,"pct_trips":1.5}
+{"mode_of_transport":"Car","weekday":"Friday","is_sustainable":false,"num_trips":254,"total_trips":1000,"pct_trips":25.4}
+{"mode_of_transport":"Walk","weekday":"Tuesday","is_sustainable":true,"num_trips":259,"total_trips":1000,"pct_trips":25.900000000000002}
+{"mode_of_transport":"Scooter","weekday":"Monday","is_sustainable":true,"num_trips":84,"total_trips":1000,"pct_trips":8.4}
+{"mode_of_transport":"Scooter","weekday":"Wednesday","is_sustainable":true,"num_trips":168,"total_trips":1000,"pct_trips":16.8}
+{"mode_of_transport":"Scooter","weekday":"Friday","is_sustainable":true,"num_trips":168,"total_trips":1000,"pct_trips":16.8}
+{"mode_of_transport":"Bicycle","weekday":"Friday","is_sustainable":true,"num_trips":173,"total_trips":1000,"pct_trips":17.299999999999997}
+{"mode_of_transport":"Scooter","weekday":"Tuesday","is_sustainable":true,"num_trips":84,"total_trips":1000,"pct_trips":8.4}
+{"mode_of_transport":"Jumped","weekday":"Wednesday","is_sustainable":true,"num_trips":3,"total_trips":1000,"pct_trips":0.3}
+{"mode_of_transport":"Bicycle","weekday":"Thursday","is_sustainable":true,"num_trips":62,"total_trips":1000,"pct_trips":6.2}
+{"mode_of_transport":"Hopped","weekday":"Monday","is_sustainable":true,"num_trips":3,"total_trips":1000,"pct_trips":0.3}
+{"mode_of_transport":"Helicopter","weekday":"Thursday","is_sustainable":false,"num_trips":24,"total_trips":1000,"pct_trips":2.4}
+{"mode_of_transport":"Walk","weekday":"Thursday","is_sustainable":true,"num_trips":510,"total_trips":1000,"pct_trips":51.0}
+{"mode_of_transport":"Car","weekday":"Tuesday","is_sustainable":false,"num_trips":364,"total_trips":1000,"pct_trips":36.4}
+{"mode_of_transport":"Mum's Shoulders","weekday":"Wednesday","is_sustainable":true,"num_trips":13,"total_trips":1000,"pct_trips":1.3}
+{"mode_of_transport":"Skipped","weekday":"Tuesday","is_sustainable":true,"num_trips":3,"total_trips":1000,"pct_trips":0.3}
+{"mode_of_transport":"Walk","weekday":"Friday","is_sustainable":true,"num_trips":326,"total_trips":1000,"pct_trips":32.6}
+{"mode_of_transport":"Walk","weekday":"Wednesday","is_sustainable":true,"num_trips":154,"total_trips":1000,"pct_trips":15.4}
+{"mode_of_transport":"Aeroplane","weekday":"Thursday","is_sustainable":false,"num_trips":9,"total_trips":1000,"pct_trips":0.8999999999999999}
+{"mode_of_transport":"Aeroplane","weekday":"Wednesday","is_sustainable":false,"num_trips":9,"total_trips":1000,"pct_trips":0.8999999999999999}
+{"mode_of_transport":"Aeroplane","weekday":"Friday","is_sustainable":false,"num_trips":9,"total_trips":1000,"pct_trips":0.8999999999999999}
+{"mode_of_transport":"Van","weekday":"Friday","is_sustainable":false,"num_trips":46,"total_trips":1000,"pct_trips":4.6}
+{"mode_of_transport":"Car","weekday":"Monday","is_sustainable":false,"num_trips":422,"total_trips":1000,"pct_trips":42.199999999999996}
+{"mode_of_transport":"Aeroplane","weekday":"Tuesday","is_sustainable":false,"num_trips":9,"total_trips":1000,"pct_trips":0.8999999999999999}
+{"mode_of_transport":"Van","weekday":"Monday","is_sustainable":false,"num_trips":37,"total_trips":1000,"pct_trips":3.6999999999999997}
+{"mode_of_transport":"Bicycle","weekday":"Wednesday","is_sustainable":true,"num_trips":207,"total_trips":1000,"pct_trips":20.7}
+{"mode_of_transport":"Walk","weekday":"Monday","is_sustainable":true,"num_trips":154,"total_trips":1000,"pct_trips":15.4}
+{"mode_of_transport":"Van","weekday":"Wednesday","is_sustainable":false,"num_trips":33,"total_trips":1000,"pct_trips":3.3000000000000003}
+{"mode_of_transport":"Mum's Shoulders","weekday":"Monday","is_sustainable":true,"num_trips":9,"total_trips":1000,"pct_trips":0.8999999999999999}
