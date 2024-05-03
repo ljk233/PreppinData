@@ -14,33 +14,6 @@ Outputs
 =======
 - output/2022/wk05_total_grade_points.ndjson
 - output/2022/wk05_gpa_per_grade.ndjson
-
-ChatGPT's review of the challenge
-=================================
-
-#DataBinning #DataAggregation
-
-The main themes of this challenge are data binning and data aggregation.
-
-1. Data Binning:
-   A significant part of the challenge involves binning the students based
-   on their grades using the `qcut` function. `qcut` is a function in Pandas and
-   Polars that bins continuous data into discrete intervals. In this challenge,
-   it's used to assign letter grades to students based on their score distribution.
-   However, it's noted that `qcut` may not produce exactly equivalent results
-   to Tableau's Tiling function, leading to slight differences in assigned
-   grades.
-
-2. Data Aggregation:
-   The final part of the challenge focuses on aggregating the binned data
-   to generate a summary of pupil grade information. Aggregation involves
-   calculating metrics such as the total grade points per pupil and the
-   average grade point per grade. This aggregation allows for insights into
-   pupil performance and overall grade distribution.
-
-Overall, the challenge provides a comprehensive exercise in data binning,
-reshaping, and aggregation, essential skills for any data analysis or data
-science task.
 """
 
 import polars as pl
@@ -80,75 +53,105 @@ def solve(pd_input_w3_fsrc: str) -> tuple[pl.DataFrame]:
     This function preprocesses pupil grade data, aggregates total grade
     points per pupil, and calculates the average grade point per grade.
     """
+
     # Preprocess the pupil grade data
     pre_data = challenge03.preprocess_pupil_grade_data(pd_input_w3_fsrc)
 
-    # Output 1
-    total_grade_points = pre_data.pipe(aggregate_total_grade_points)
+    # Collect the output
+    total_grade_points = aggregate_total_grade_points(pre_data, GRADE_POINT)
 
-    # Output 2
-    gpa_per_grade = pre_data.pipe(aggregate_grade_point_average_per_grade)
+    gpa_per_grade = pre_data.pipe(aggregate_grade_point_average_per_grade, GRADE_POINT)
 
     return total_grade_points.collect(), gpa_per_grade.collect()
 
 
-def aggregate_grade_point_average_per_grade(pre_data: pl.LazyFrame) -> pl.LazyFrame:
-    """Aggregate average grade point per grade.
-
-    Parameters
-    ----------
-    pre_data : pl.LazyFrame
-        DataFrame containing preprocessed pupil grade data.
-
-    Returns
-    -------
-    pl.LazyFrame
-        DataFrame containing average grade point per grade.
-    """
-    pupil_grade = pre_data.pipe(view_pupil_grade)
-
-    total_grade_points = pre_data.pipe(aggregate_total_grade_points)
-
-    return (
-        pupil_grade.join(total_grade_points, on="pupil_id")
-        .group_by("grade")
-        .agg(pl.mean("total_grade_points").round(2).alias("grade_point_average"))
-    )
-
-
-def aggregate_total_grade_points(pre_data: pl.LazyFrame) -> pl.LazyFrame:
+def aggregate_total_grade_points(
+    pre_data: pl.LazyFrame, grade_point_map: pl.LazyFrame
+) -> pl.LazyFrame:
     """Aggregate total grade points per pupil.
 
     Parameters
     ----------
     pre_data : pl.LazyFrame
-        DataFrame containing preprocessed pupil grade data.
+        LazyFrame representing preprocessed pupil grade data.
+    grade_point_map : pl.LazyFrame
+        LazyFrame representing the map between an alphanumeric grades to
+        its grade point value.
 
     Returns
     -------
     pl.LazyFrame
-        DataFrame containing total grade points per pupil.
+        LazyFrame representing the total grade points per pupil.
     """
-    pupil_grade = pre_data.pipe(view_pupil_grade)
 
-    return pupil_grade.group_by("pupil_id").agg(
-        pl.sum("grade_point").alias("total_grade_points")
+    # Collect the data
+    pupil_subject_grade_point = view_pupil_subject_grade_point(
+        pre_data, grade_point_map
+    )
+
+    # Expressions
+    total_grade_points_expr = pl.sum("grade_point")
+
+    return pupil_subject_grade_point.group_by("pupil_id").agg(
+        total_grade_points=total_grade_points_expr
     )
 
 
-def view_pupil_grade(pre_data: pl.LazyFrame) -> pl.LazyFrame:
-    """View pupil grades.
+def aggregate_grade_point_average_per_grade(
+    pre_data: pl.LazyFrame, grade_point_map: pl.LazyFrame
+) -> pl.LazyFrame:
+    """Aggregate average grade point per grade.
 
     Parameters
     ----------
     pre_data : pl.LazyFrame
-        DataFrame containing preprocessed pupil grade data.
+        LazyFrame representing preprocessed pupil grade data.
+    grade_point_map : pl.LazyFrame
+        LazyFrame representing the map between an alphanumeric grades to
+        its grade point value.
 
     Returns
     -------
     pl.LazyFrame
-        DataFrame containing pupil grades.
+        LazyFrame representing the average grade point per grade.
     """
+
+    # Collect the data
+    pupil_subject_grade_point = view_pupil_subject_grade_point(
+        pre_data, grade_point_map
+    )
+
+    total_grade_points = aggregate_total_grade_points(pre_data, GRADE_POINT)
+
+    # Expressions
+    grade_point_average_expr = pl.mean("total_grade_points").round(2)
+
+    return (
+        pupil_subject_grade_point.join(total_grade_points, on="pupil_id")
+        .group_by("grade")
+        .agg(grade_point_average=grade_point_average_expr)
+    )
+
+
+def view_pupil_subject_grade_point(
+    pre_data: pl.LazyFrame, grade_point_map: pl.LazyFrame
+) -> pl.LazyFrame:
+    """View the pupil grade points per subject.
+
+    Parameters
+    ----------
+    pre_data : pl.LazyFrame
+        LazyFrame representing preprocessed pupil grade data.
+    grade_point_map : pl.LazyFrame
+        LazyFrame representing the map between an alphanumeric grades to
+        its grade point value.
+
+    Returns
+    -------
+    pl.LazyFrame
+        LazyFrame representing pupil grade points per subject.
+    """
+
     # Expressions
     grade_expr = (
         pl.col("score")
@@ -160,5 +163,5 @@ def view_pupil_grade(pre_data: pl.LazyFrame) -> pl.LazyFrame:
     return pre_data.select(
         "pupil_id",
         "subject_name",
-        grade_expr.alias("grade"),
-    ).join(GRADE_POINT, on="grade")
+        grade=grade_expr,
+    ).join(grade_point_map, on="grade")
