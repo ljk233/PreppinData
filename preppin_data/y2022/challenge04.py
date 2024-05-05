@@ -1,15 +1,17 @@
 """2022: Week 4 - The Prep School - Travel Plans
 
-The challenge suggests that it requires the data from week 1, but nothing
-in the output depends on its data. We therefore discarded this direction.
-
 Inputs
-======
+------
 - __input/2022/PD 2021 WK 1 to 4 ideas - Preferences of Travel.csv
 
 Outputs
-=======
+-------
 - output/2022/wk04_trip_summary.ndjson
+
+Notes
+-----
+The challenge suggests that it requires the data from week 1, but nothing
+in the output depends on it. We therefore discarded this direction.
 """
 
 import polars as pl
@@ -43,18 +45,6 @@ MODE_OF_TRANSPORT = pl.LazyFrame(
 )
 
 
-WEEKDAY_MAP = pl.LazyFrame(
-    [
-        ("M", "Monday"),
-        ("Tu", "Tuesday"),
-        ("W", "Wednesday"),
-        ("Th", "Thursday"),
-        ("F", "Friday"),
-    ],
-    schema=["weekday_code", "weekday"],
-)
-
-
 def solve(pd_input_w4_fsrc: str) -> pl.DataFrame:
     """Solve challenge 4 of Preppin' Data 2022.
 
@@ -76,9 +66,7 @@ def solve(pd_input_w4_fsrc: str) -> pl.DataFrame:
 
     # Preprocess the pupil travel plans data
     pupil_daily_travel_preference = preprocess_pupil_daily_travel_preference_data(
-        pd_input_w4_fsrc,
-        MODE_OF_TRANSPORT,
-        WEEKDAY_MAP,
+        pd_input_w4_fsrc, MODE_OF_TRANSPORT
     )
 
     # Collect the output
@@ -90,9 +78,7 @@ def solve(pd_input_w4_fsrc: str) -> pl.DataFrame:
 
 
 def preprocess_pupil_daily_travel_preference_data(
-    pd_input_w4_fsrc: str,
-    mode_of_transport: pl.LazyFrame,
-    weekday_map: pl.LazyFrame,
+    pd_input_w4_fsrc: str, mode_of_transport: pl.LazyFrame
 ) -> pl.LazyFrame:
     """Preprocess the pupil daily travel preference data.
 
@@ -101,11 +87,8 @@ def preprocess_pupil_daily_travel_preference_data(
     pd_input_w4_fsrc : str
         Filepath of the input CSV file for Week 4.
     mode_of_transport : pl.LazyFrame
-        LazyFrame representing the mode of study and whether or not it is
-        sustainable.
-    weekday_map : pl.LazyFrame
-        LazyFrame representing the map between the short weekday code and
-        its full name.
+        LazyFrame representing the mode of study and whether or not it
+        is sustainable.
 
     Returns
     -------
@@ -118,13 +101,14 @@ def preprocess_pupil_daily_travel_preference_data(
     This function loads the input CSV file, reshapes it, and cleans the
     data for further analysis.
     """
+
     return (
         load_data(pd_input_w4_fsrc)
         .pipe(reshape_pupil_daily_travel_preference_data)
         .pipe(
             clean_pupil_daily_travel_preference_data,
             mode_of_transport,
-            weekday_map,
+            # weekday_map,
         )
     )
 
@@ -168,9 +152,7 @@ def reshape_pupil_daily_travel_preference_data(data: pl.LazyFrame) -> pl.LazyFra
 
 
 def clean_pupil_daily_travel_preference_data(
-    reshaped_data: pl.LazyFrame,
-    mode_of_transport: pl.LazyFrame,
-    weekday_map: pl.LazyFrame,
+    reshaped_data: pl.LazyFrame, mode_of_transport: pl.LazyFrame
 ) -> pl.LazyFrame:
     """Clean the reshaped pupil daily travel preference data.
 
@@ -182,9 +164,6 @@ def clean_pupil_daily_travel_preference_data(
     mode_of_transport : pl.LazyFrame
         LazyFrame representing the mode of study and whether or not it is
         sustainable.
-    weekday_map : pl.LazyFrame
-        LazyFrame representing the map between the short weekday code and
-        its full name.
 
     Returns
     -------
@@ -195,9 +174,26 @@ def clean_pupil_daily_travel_preference_data(
 
     col_mapper = {"Student ID": "pupil_id"}
 
+    # Expressions
+    weekyday_code = pl.col("weekday_code")
+
+    weekyday_expr = (
+        pl.when(weekyday_code == "M")
+        .then(pl.lit("Monday"))
+        .when(weekyday_code == "Tu")
+        .then(pl.lit("Tuesday"))
+        .when(weekyday_code == "W")
+        .then(pl.lit("Wednesday"))
+        .when(weekyday_code == "Th")
+        .then(pl.lit("Thursday"))
+        .when(weekyday_code == "F")
+        .then(pl.lit("Friday"))
+        .otherwise(pl.lit(None))
+    )
+
     return (
-        reshaped_data.join(weekday_map, on="weekday_code")
-        .join(mode_of_transport, on="orig_mode_of_transport", how="left")
+        reshaped_data.join(mode_of_transport, on="orig_mode_of_transport", how="left")
+        .with_columns(weekday=weekyday_expr)
         .drop("orig_mode_of_transport", "weekday_code")
         .rename(col_mapper)
     )
