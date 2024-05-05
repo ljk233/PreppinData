@@ -1,17 +1,19 @@
 """2022: Week 3 - The Prep School - Passing Grades
 
-There is some confusion throughout the challenge, because the terms "grade"
-and "score" are used interchangably despite them not being equivalent.
-We use "score" in this challenge.
-
 Inputs
-======
+------
 - __input/2022/PD 2022 Wk 1 Input - Input.csv
 - __input/2022/PD 2022 WK 3 Grades.csv
 
 Outputs
-=======
+-------
 - output/2022/wk03_pupil_performance_summary.ndjson
+
+Notes
+-----
+There is some confusion throughout the challenge, because the terms "grade"
+and "score" are used interchangably despite them not being equivalent.
+We use "score" in this challenge.
 """
 
 import polars as pl
@@ -92,10 +94,6 @@ def load_pupil_grade_data(pd_input_w3_fsrc: str) -> pl.LazyFrame:
     -------
     pl.LazyFrame
         Loaded pupil grade data.
-
-    Notes
-    -----
-    This function scans the CSV file containing pupil grade data.
     """
     return pl.scan_csv(pd_input_w3_fsrc)
 
@@ -202,10 +200,6 @@ def view_pupil_performance(
     pl.LazyFrame
         LazyFrame representing the pupil's grades in different subjects,
         and whether they passed or not.
-
-    Notes
-    -----
-    Primary key is {pupil_id, subject_name}.
     """
 
     # Expressions

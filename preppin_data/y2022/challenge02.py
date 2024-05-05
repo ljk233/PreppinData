@@ -1,11 +1,11 @@
 """2022: Week 2 - The Prep School - Birthday Cakes
 
 Inputs
-======
+------
 - __input/2022/PD 2022 Wk 1 Input - Input.csv
 
 Outputs
-=======
+-------
 - output/2022/wk02_pupil_birthday_2022.ndjson
 - output/2022/wk02_num_birthdays_per_month_and_weekday.ndjson
 """
@@ -116,10 +116,6 @@ def aggregate_num_birthdays_per_month_weekday(
     -------
     pl.LazyFrame
         DataFrame containing the count of birthdays per month and weekday.
-
-    Notes
-    -----
-    Primary key is {birthday_month, birthday_weekday}
     """
 
     # Collect the data

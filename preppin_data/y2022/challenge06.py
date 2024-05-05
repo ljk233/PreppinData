@@ -1,7 +1,5 @@
 """2022: Week 6 - [Seven] letter Scrabble Words
 
-Note, 
-
 Inputs
 ------
 - __input/2022/7 letter words.xlsx
