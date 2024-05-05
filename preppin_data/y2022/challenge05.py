@@ -1,37 +1,26 @@
 """2022: Week 5 The Prep School - Setting Grades
 
+Inputs
+------
+- __input/2022/PD 2022 WK 3 Grades.csv
+
+Outputs
+-------
+- output/2022/wk05_total_grade_points.ndjson
+- output/2022/wk05_gpa_per_grade.ndjson
+
+Notes
+-----
 There are small differences in the assigned grades (and thus the GPA) because
 the `qcut` function is not equivalent to Tableau's Tiling function.
 
 We also deviate from the required output, instead returning the pupil's
 total grade points and the GPA per grade.
-
-Inputs
-======
-- __input/2022/PD 2022 WK 3 Grades.csv
-
-Outputs
-=======
-- output/2022/wk05_total_grade_points.ndjson
-- output/2022/wk05_gpa_per_grade.ndjson
 """
 
 import polars as pl
 
 from . import challenge03
-
-
-GRADE_POINT = pl.LazyFrame(
-    [
-        ("A", 10),
-        ("B", 8),
-        ("C", 6),
-        ("D", 4),
-        ("E", 2),
-        ("F", 1),
-    ],
-    schema=["grade", "grade_point"],
-)
 
 
 def solve(pd_input_w3_fsrc: str) -> tuple[pl.DataFrame]:
@@ -58,25 +47,20 @@ def solve(pd_input_w3_fsrc: str) -> tuple[pl.DataFrame]:
     pre_data = challenge03.preprocess_pupil_grade_data(pd_input_w3_fsrc)
 
     # Collect the output
-    total_grade_points = aggregate_total_grade_points(pre_data, GRADE_POINT)
+    total_grade_points = pre_data.pipe(aggregate_total_grade_points)
 
-    gpa_per_grade = pre_data.pipe(aggregate_grade_point_average_per_grade, GRADE_POINT)
+    gpa_per_grade = pre_data.pipe(aggregate_grade_point_average_per_grade)
 
     return total_grade_points.collect(), gpa_per_grade.collect()
 
 
-def aggregate_total_grade_points(
-    pre_data: pl.LazyFrame, grade_point_map: pl.LazyFrame
-) -> pl.LazyFrame:
+def aggregate_total_grade_points(pre_data: pl.LazyFrame) -> pl.LazyFrame:
     """Aggregate total grade points per pupil.
 
     Parameters
     ----------
     pre_data : pl.LazyFrame
         LazyFrame representing preprocessed pupil grade data.
-    grade_point_map : pl.LazyFrame
-        LazyFrame representing the map between an alphanumeric grades to
-        its grade point value.
 
     Returns
     -------
@@ -85,9 +69,7 @@ def aggregate_total_grade_points(
     """
 
     # Collect the data
-    pupil_subject_grade_point = view_pupil_subject_grade_point(
-        pre_data, grade_point_map
-    )
+    pupil_subject_grade_point = pre_data.pipe(view_pupil_subject_grade_point)
 
     # Expressions
     total_grade_points_expr = pl.sum("grade_point")
@@ -97,18 +79,13 @@ def aggregate_total_grade_points(
     )
 
 
-def aggregate_grade_point_average_per_grade(
-    pre_data: pl.LazyFrame, grade_point_map: pl.LazyFrame
-) -> pl.LazyFrame:
+def aggregate_grade_point_average_per_grade(pre_data: pl.LazyFrame) -> pl.LazyFrame:
     """Aggregate average grade point per grade.
 
     Parameters
     ----------
     pre_data : pl.LazyFrame
         LazyFrame representing preprocessed pupil grade data.
-    grade_point_map : pl.LazyFrame
-        LazyFrame representing the map between an alphanumeric grades to
-        its grade point value.
 
     Returns
     -------
@@ -117,11 +94,9 @@ def aggregate_grade_point_average_per_grade(
     """
 
     # Collect the data
-    pupil_subject_grade_point = view_pupil_subject_grade_point(
-        pre_data, grade_point_map
-    )
+    pupil_subject_grade_point = pre_data.pipe(view_pupil_subject_grade_point)
 
-    total_grade_points = aggregate_total_grade_points(pre_data, GRADE_POINT)
+    total_grade_points = pre_data.pipe(aggregate_total_grade_points)
 
     # Expressions
     grade_point_average_expr = pl.mean("total_grade_points").round(2)
@@ -133,18 +108,13 @@ def aggregate_grade_point_average_per_grade(
     )
 
 
-def view_pupil_subject_grade_point(
-    pre_data: pl.LazyFrame, grade_point_map: pl.LazyFrame
-) -> pl.LazyFrame:
+def view_pupil_subject_grade_point(pre_data: pl.LazyFrame) -> pl.LazyFrame:
     """View the pupil grade points per subject.
 
     Parameters
     ----------
     pre_data : pl.LazyFrame
         LazyFrame representing preprocessed pupil grade data.
-    grade_point_map : pl.LazyFrame
-        LazyFrame representing the map between an alphanumeric grades to
-        its grade point value.
 
     Returns
     -------
@@ -160,8 +130,26 @@ def view_pupil_subject_grade_point(
         .cast(pl.Utf8)
     )
 
+    grade = pl.col("grade")
+
+    grade_point_expr = (
+        pl.when(grade == "A")
+        .then(pl.lit(10))
+        .when(grade == "B")
+        .then(pl.lit(8))
+        .when(grade == "C")
+        .then(pl.lit(6))
+        .when(grade == "D")
+        .then(pl.lit(4))
+        .when(grade == "E")
+        .then(pl.lit(2))
+        .when(grade == "F")
+        .then(pl.lit(1))
+        .otherwise(pl.lit(None))
+    )
+
     return pre_data.select(
         "pupil_id",
         "subject_name",
         grade=grade_expr,
-    ).join(grade_point_map, on="grade")
+    ).with_columns(grade_point=grade_point_expr)
