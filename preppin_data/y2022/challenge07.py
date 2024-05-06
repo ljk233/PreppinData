@@ -7,7 +7,7 @@ Inputs
 
 Outputs
 -------
-- output/2022/wk06_seven_letter_word_analysis.ndjson
+- output/2022/wk07_agent_performance.ndjson
 """
 
 import polars as pl
