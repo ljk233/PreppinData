@@ -31,7 +31,10 @@ def solve(pd_input_wk4_fsrc: str) -> pl.DataFrame:
 
     seat_plan = preprocess_seat_plan_data(pd_input_wk4_fsrc)
 
-    return view_unbooked_seats(seat_allocation, seat_plan)
+    # Collect the output
+    unbooked_seats = view_unbooked_seats(seat_allocation, seat_plan)
+
+    return unbooked_seats
 
 
 def preprocess_seat_allocation_data(pd_input_wk4_fsrc: str) -> pl.DataFrame:
