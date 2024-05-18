@@ -1,0 +1,32 @@
+{"seat_class":"Premium Economy","has_flow_card":true,"quarter":2,"minimum_price":240.0,"median_price":517.8,"mean_price":536.5052631578947,"maximum_price":840.0}
+{"seat_class":"Premium Economy","has_flow_card":true,"quarter":4,"minimum_price":249.6,"median_price":522.5999999999999,"mean_price":533.0100000000003,"maximum_price":834.0}
+{"seat_class":"Premium Economy","has_flow_card":false,"quarter":3,"minimum_price":240.0,"median_price":490.79999999999995,"mean_price":516.9808695652175,"maximum_price":838.8}
+{"seat_class":"First Class","has_flow_card":true,"quarter":4,"minimum_price":1030.0,"median_price":2212.5,"mean_price":2120.3070175438597,"maximum_price":3460.0}
+{"seat_class":"Economy","has_flow_card":false,"quarter":2,"minimum_price":202.0,"median_price":445.0,"mean_price":450.5929203539823,"maximum_price":694.0}
+{"seat_class":"Business Class","has_flow_card":false,"quarter":2,"minimum_price":507.5,"median_price":1205.0,"mean_price":1160.9558823529412,"maximum_price":1745.0}
+{"seat_class":"First Class","has_flow_card":true,"quarter":1,"minimum_price":1020.0,"median_price":2325.0,"mean_price":2264.120879120879,"maximum_price":3500.0}
+{"seat_class":"Premium Economy","has_flow_card":false,"quarter":2,"minimum_price":240.0,"median_price":553.8,"mean_price":543.9,"maximum_price":828.0}
+{"seat_class":"Premium Economy","has_flow_card":true,"quarter":3,"minimum_price":241.2,"median_price":553.8,"mean_price":545.15593220339,"maximum_price":840.0}
+{"seat_class":"Premium Economy","has_flow_card":false,"quarter":1,"minimum_price":241.2,"median_price":574.8,"mean_price":558.0541353383458,"maximum_price":834.0}
+{"seat_class":"Business Class","has_flow_card":false,"quarter":3,"minimum_price":517.5,"median_price":1125.0,"mean_price":1128.115671641791,"maximum_price":1747.5}
+{"seat_class":"First Class","has_flow_card":false,"quarter":1,"minimum_price":1030.0,"median_price":2340.0,"mean_price":2305.685483870968,"maximum_price":3455.0}
+{"seat_class":"First Class","has_flow_card":false,"quarter":2,"minimum_price":1000.0,"median_price":2325.0,"mean_price":2283.269230769231,"maximum_price":3480.0}
+{"seat_class":"Premium Economy","has_flow_card":true,"quarter":1,"minimum_price":249.6,"median_price":523.1999999999999,"mean_price":535.509375,"maximum_price":840.0}
+{"seat_class":"Business Class","has_flow_card":true,"quarter":2,"minimum_price":500.0,"median_price":1071.25,"mean_price":1115.875,"maximum_price":1737.5}
+{"seat_class":"Economy","has_flow_card":false,"quarter":4,"minimum_price":200.0,"median_price":428.0,"mean_price":433.0,"maximum_price":698.0}
+{"seat_class":"First Class","has_flow_card":false,"quarter":4,"minimum_price":1015.0,"median_price":2202.5,"mean_price":2242.8125,"maximum_price":3465.0}
+{"seat_class":"Business Class","has_flow_card":false,"quarter":1,"minimum_price":515.0,"median_price":1075.0,"mean_price":1089.0804597701149,"maximum_price":1702.5}
+{"seat_class":"Business Class","has_flow_card":true,"quarter":1,"minimum_price":502.5,"median_price":1160.0,"mean_price":1136.2837837837837,"maximum_price":1737.5}
+{"seat_class":"Economy","has_flow_card":true,"quarter":4,"minimum_price":205.0,"median_price":424.0,"mean_price":433.98473282442745,"maximum_price":697.0}
+{"seat_class":"Economy","has_flow_card":false,"quarter":1,"minimum_price":204.0,"median_price":438.0,"mean_price":439.9734513274336,"maximum_price":699.0}
+{"seat_class":"First Class","has_flow_card":false,"quarter":3,"minimum_price":1000.0,"median_price":2285.0,"mean_price":2297.6335877862593,"maximum_price":3475.0}
+{"seat_class":"Economy","has_flow_card":true,"quarter":2,"minimum_price":200.0,"median_price":459.0,"mean_price":456.28333333333336,"maximum_price":696.0}
+{"seat_class":"Economy","has_flow_card":true,"quarter":1,"minimum_price":201.0,"median_price":447.5,"mean_price":455.19444444444446,"maximum_price":698.0}
+{"seat_class":"First Class","has_flow_card":true,"quarter":3,"minimum_price":1005.0,"median_price":2347.5,"mean_price":2274.3548387096776,"maximum_price":3495.0}
+{"seat_class":"Business Class","has_flow_card":false,"quarter":4,"minimum_price":510.0,"median_price":1062.5,"mean_price":1098.98,"maximum_price":1730.0}
+{"seat_class":"First Class","has_flow_card":true,"quarter":2,"minimum_price":1020.0,"median_price":2290.0,"mean_price":2326.4018691588785,"maximum_price":3490.0}
+{"seat_class":"Business Class","has_flow_card":true,"quarter":3,"minimum_price":502.5,"median_price":1090.0,"mean_price":1091.2015503875969,"maximum_price":1750.0}
+{"seat_class":"Economy","has_flow_card":false,"quarter":3,"minimum_price":201.0,"median_price":487.0,"mean_price":475.25,"maximum_price":691.0}
+{"seat_class":"Economy","has_flow_card":true,"quarter":3,"minimum_price":206.0,"median_price":457.0,"mean_price":448.84166666666664,"maximum_price":697.0}
+{"seat_class":"Premium Economy","has_flow_card":false,"quarter":4,"minimum_price":240.0,"median_price":555.6,"mean_price":550.8410256410257,"maximum_price":835.1999999999999}
+{"seat_class":"Business Class","has_flow_card":true,"quarter":4,"minimum_price":505.0,"median_price":1108.75,"mean_price":1118.88671875,"maximum_price":1722.5}
