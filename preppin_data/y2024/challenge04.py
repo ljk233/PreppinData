@@ -7,16 +7,6 @@ Inputs
 Outputs
 -------
 - output/2024/wk04_unbooked_seats.ndjson
-
-Notes
------
-We deviate from the suggested method.
-
-1. We do not differentiate between seats that have been allocated to flow
-   card or  non-flow card customers, because it does not affect the final
-   output.
-2. We do not aggregate the seats allocated, because it does not affect
-   the efficiency.
 """
 
 import polars as pl
